@@ -1,0 +1,151 @@
+{
+  "common": {
+    "learnMore": "Saber más",
+    "getInTouch": "Contactar",
+    "seeWork": "Ver nuestro trabajo",
+    "viewAll": "Ver todo",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "lightMode": "Cambiar a modo claro",
+    "darkMode": "Cambiar a modo oscuro"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "work": "Trabajo",
+    "contact": "Contacto"
+  },
+  "home": {
+    "header": {
+      "logo": "ADEV",
+      "getStarted": "Comenzar"
+    },
+    "hero": {
+      "tagline": "Agencia Digital",
+      "badge": "De confianza para equipos ambiciosos",
+      "title": "Creamos experiencias digitales que impulsan el crecimiento",
+      "subtitle": "ADEV colabora con empresas ambiciosas para diseñar, desarrollar y escalar productos digitales de clase mundial.",
+      "cta": "Ver nuestro trabajo",
+      "ctaSecondary": "Contáctanos",
+      "ctaPrimary": "Iniciar un proyecto",
+      "stats": {
+        "projects": "120+",
+        "projectsLabel": "Proyectos entregados",
+        "clients": "80+",
+        "clientsLabel": "Clientes satisfechos",
+        "years": "8+",
+        "yearsLabel": "Años de experiencia"
+      }
+    },
+    "services": {
+      "badge": "Lo que hacemos",
+      "heading": "Servicios digitales de extremo a extremo",
+      "subheading": "De la estrategia al lanzamiento, cubrimos cada capa de tu producto digital.",
+      "items": {
+        "web": {
+          "title": "Desarrollo Web",
+          "description": "Aplicaciones web rápidas y escalables con tecnologías modernas y buenas prácticas."
+        },
+        "mobile": {
+          "title": "Apps Móviles",
+          "description": "Experiencias móviles nativas y multiplataforma que deleitan a los usuarios en cada dispositivo."
+        },
+        "design": {
+          "title": "Diseño de Producto",
+          "description": "Investigación de usuarios, estrategia UX e interfaces que convierten visitantes en clientes."
+        }
+      }
+    },
+    "projects": {
+      "badge": "Trabajo destacado",
+      "heading": "Productos de los que estamos orgullosos",
+      "subheading": "Una selección de proyectos donde superamos los límites del diseño y la ingeniería.",
+      "viewAll": "Ver todos los proyectos",
+      "items": {
+        "project1": {
+          "title": "Plataforma HealthOS",
+          "category": "Aplicación Web"
+        },
+        "project2": {
+          "title": "Panel Fintrack",
+          "category": "SaaS"
+        },
+        "project3": {
+          "title": "Nomad Mobile",
+          "category": "App Móvil"
+        }
+      }
+    },
+    "medica": {
+      "badge": "Caso de estudio",
+      "heading": "Medica — Salud reimaginada",
+      "subheading": "Diseñamos y construimos una plataforma integral de gestión sanitaria que atiende a más de 50.000 pacientes en 12 clínicas. Desde el alta del paciente hasta diagnósticos asistidos por IA.",
+      "cta": "Leer caso de estudio"
+    },
+    "process": {
+      "badge": "Cómo trabajamos",
+      "heading": "Un proceso probado para grandes resultados",
+      "subheading": "Cuatro fases claras que llevan tu idea desde el concepto hasta un producto en vivo y pulido.",
+      "steps": {
+        "discovery": {
+          "number": "01",
+          "title": "Descubrimiento",
+          "description": "Profundizamos en tus objetivos de negocio, usuarios y mercado para construir una base sólida."
+        },
+        "design": {
+          "number": "02",
+          "title": "Diseño",
+          "description": "Wireframes, prototipos y diseños de alta fidelidad creados pensando en tus usuarios."
+        },
+        "development": {
+          "number": "03",
+          "title": "Desarrollo",
+          "description": "Código limpio, probado y escalable entregado en sprints focalizados con total transparencia."
+        },
+        "launch": {
+          "number": "04",
+          "title": "Lanzamiento",
+          "description": "Despliegue sin problemas, monitoreo y soporte continuo para mantener todo funcionando."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Trabajemos juntos",
+      "heading": "¿Listo para construir algo grande?",
+      "subheading": "Cuéntanos sobre tu proyecto y te responderemos en 24 horas.",
+      "button": "Iniciar un proyecto",
+      "ctaPrimary": "Iniciar un proyecto",
+      "ctaSecondary": "Ver nuestro trabajo"
+    },
+    "footer": {
+      "logo": "ADEV",
+      "tagline": "Construyendo experiencias digitales que importan.",
+      "company": {
+        "heading": "Empresa",
+        "about": "Nosotros",
+        "work": "Trabajo",
+        "careers": "Empleos",
+        "blog": "Blog"
+      },
+      "services": {
+        "heading": "Servicios",
+        "web": "Desarrollo Web",
+        "mobile": "Apps Móviles",
+        "design": "Diseño de Producto",
+        "strategy": "Estrategia Digital"
+      },
+      "connect": {
+        "heading": "Conectar",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "twitter": "Twitter"
+      },
+      "copyright": "© 2025 ADEV. Todos los derechos reservados."
+    }
+  },
+  "footer": {
+    "tagline": "Construyendo experiencias digitales que importan.",
+    "copyright": "© 2025 ADEV. Todos los derechos reservados."
+  }
+}

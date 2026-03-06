@@ -1,0 +1,151 @@
+{
+  "common": {
+    "learnMore": "Learn more",
+    "getInTouch": "Get in touch",
+    "seeWork": "See our work",
+    "viewAll": "View all",
+    "close": "Close",
+    "open": "Open",
+    "lightMode": "Switch to light mode",
+    "darkMode": "Switch to dark mode"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "home": {
+    "header": {
+      "logo": "ADEV",
+      "getStarted": "Get Started"
+    },
+    "hero": {
+      "tagline": "Digital Agency",
+      "badge": "Trusted by ambitious teams",
+      "title": "We build digital experiences that drive growth",
+      "subtitle": "ADEV partners with ambitious companies to design, develop, and scale world-class digital products.",
+      "cta": "See our work",
+      "ctaSecondary": "Get in touch",
+      "ctaPrimary": "Start a Project",
+      "stats": {
+        "projects": "120+",
+        "projectsLabel": "Projects delivered",
+        "clients": "80+",
+        "clientsLabel": "Happy clients",
+        "years": "8+",
+        "yearsLabel": "Years of experience"
+      }
+    },
+    "services": {
+      "badge": "What we do",
+      "heading": "End-to-end digital services",
+      "subheading": "From strategy to launch, we cover every layer of your digital product.",
+      "items": {
+        "web": {
+          "title": "Web Development",
+          "description": "Fast, scalable web applications built with modern technologies and best practices."
+        },
+        "mobile": {
+          "title": "Mobile Apps",
+          "description": "Native and cross-platform mobile experiences that delight users on every device."
+        },
+        "design": {
+          "title": "Product Design",
+          "description": "User research, UX strategy, and interface design that converts visitors into customers."
+        }
+      }
+    },
+    "projects": {
+      "badge": "Featured work",
+      "heading": "Products we're proud of",
+      "subheading": "A selection of projects where we pushed the boundaries of design and engineering.",
+      "viewAll": "View all projects",
+      "items": {
+        "project1": {
+          "title": "HealthOS Platform",
+          "category": "Web App"
+        },
+        "project2": {
+          "title": "Fintrack Dashboard",
+          "category": "SaaS"
+        },
+        "project3": {
+          "title": "Nomad Mobile",
+          "category": "Mobile App"
+        }
+      }
+    },
+    "medica": {
+      "badge": "Case study",
+      "heading": "Medica — Healthcare reimagined",
+      "subheading": "We designed and built a comprehensive healthcare management platform serving 50,000+ patients across 12 clinics. From patient onboarding to AI-assisted diagnostics.",
+      "cta": "Read case study"
+    },
+    "process": {
+      "badge": "How we work",
+      "heading": "A proven process for great results",
+      "subheading": "Four clear phases that take your idea from concept to a live, polished product.",
+      "steps": {
+        "discovery": {
+          "number": "01",
+          "title": "Discovery",
+          "description": "We dig deep into your business goals, users, and market to build a solid foundation."
+        },
+        "design": {
+          "number": "02",
+          "title": "Design",
+          "description": "Wireframes, prototypes, and high-fidelity designs crafted with your users in mind."
+        },
+        "development": {
+          "number": "03",
+          "title": "Development",
+          "description": "Clean, tested, and scalable code delivered in focused sprints with full transparency."
+        },
+        "launch": {
+          "number": "04",
+          "title": "Launch",
+          "description": "Seamless deployment, monitoring, and ongoing support to keep things running smoothly."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Let's work together",
+      "heading": "Ready to build something great?",
+      "subheading": "Tell us about your project and we'll get back to you within 24 hours.",
+      "button": "Start a project",
+      "ctaPrimary": "Start a Project",
+      "ctaSecondary": "View our work"
+    },
+    "footer": {
+      "logo": "ADEV",
+      "tagline": "Building digital experiences that matter.",
+      "company": {
+        "heading": "Company",
+        "about": "About",
+        "work": "Work",
+        "careers": "Careers",
+        "blog": "Blog"
+      },
+      "services": {
+        "heading": "Services",
+        "web": "Web Development",
+        "mobile": "Mobile Apps",
+        "design": "Product Design",
+        "strategy": "Digital Strategy"
+      },
+      "connect": {
+        "heading": "Connect",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "twitter": "Twitter"
+      },
+      "copyright": "© 2025 ADEV. All rights reserved."
+    }
+  },
+  "footer": {
+    "tagline": "Building digital experiences that matter.",
+    "copyright": "© 2025 ADEV. All rights reserved."
+  }
+}
