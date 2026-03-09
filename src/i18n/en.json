@@ -14,7 +14,60 @@
     "about": "About",
     "services": "Services",
     "work": "Work",
+    "process": "Process",
     "contact": "Contact"
+  },
+  "form": {
+    "requiredHelper": "* Fields marked with an asterisk are required.",
+    "name": {
+      "required": "Name is required.",
+      "min": "Name must be at least 2 characters."
+    },
+    "email": {
+      "required": "Email address is required.",
+      "invalid": "Please enter a valid email address."
+    },
+    "budget": {
+      "required": "Please select a budget range."
+    },
+    "description": {
+      "required": "Project description is required.",
+      "min": "Description must be at least 10 characters."
+    }
+  },
+  "modal": {
+    "projectIntake": {
+      "title": "Start a Project",
+      "subtitle": "Tell us about your project and we'll get back to you within 24 hours.",
+      "name": "Your Name",
+      "namePlaceholder": "Jane Smith",
+      "email": "Email Address",
+      "emailPlaceholder": "jane@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your Company",
+      "budget": "Budget Range",
+      "budgetPlaceholder": "Select a budget",
+      "budgetSmall": "Under $10k",
+      "budgetMedium": "$10k – $50k",
+      "budgetLarge": "$50k – $100k",
+      "budgetEnterprise": "$100k+",
+      "description": "Project Description",
+      "descriptionPlaceholder": "Tell us about your goals, timeline, and any requirements...",
+      "submit": "Send Request",
+      "submitting": "Sending..."
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "subtitle": "We'll get back to you within 24 hours.",
+      "name": "Your Name",
+      "namePlaceholder": "Jane Smith",
+      "email": "Email Address",
+      "emailPlaceholder": "jane@company.com",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    }
   },
   "home": {
     "header": {
@@ -116,7 +169,21 @@
       "subheading": "Tell us about your project and we'll get back to you within 24 hours.",
       "button": "Start a project",
       "ctaPrimary": "Start a Project",
-      "ctaSecondary": "View our work"
+      "ctaSecondary": "View our work",
+      "bookCall": "Book a Call",
+      "bookCallSubtitle": "Schedule a 30-minute intro call",
+      "calendlyPlaceholder": "Calendly calendar will appear here",
+      "orDivider": "or send us a message",
+      "sendMessage": "Send a Message",
+      "sendMessageSubtitle": "We reply within 24 hours",
+      "formName": "Your Name",
+      "formNamePlaceholder": "Jane Smith",
+      "formEmail": "Email Address",
+      "formEmailPlaceholder": "jane@company.com",
+      "formMessage": "Message",
+      "formMessagePlaceholder": "Tell us about your project...",
+      "formSubmit": "Send Message",
+      "formSubmitting": "Sending..."
     },
     "footer": {
       "logo": "ADEV",

@@ -5,7 +5,9 @@ import { ServicesSection } from './ServicesSection'
 describe('ServicesSection', () => {
   it('renders the section heading', () => {
     render(<ServicesSection />)
-    expect(screen.getByRole('heading', { name: /end-to-end digital services/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /end-to-end digital services/i }),
+    ).toBeInTheDocument()
   })
 
   it('renders the section badge', () => {
@@ -25,5 +27,23 @@ describe('ServicesSection', () => {
     expect(screen.getByText(/scalable web applications/i)).toBeInTheDocument()
     expect(screen.getByText(/cross-platform mobile/i)).toBeInTheDocument()
     expect(screen.getByText(/user research/i)).toBeInTheDocument()
+  })
+
+  it('renders 3 article cards', () => {
+    render(<ServicesSection />)
+    expect(screen.getAllByRole('article')).toHaveLength(3)
+  })
+
+  it('has section id=services', () => {
+    const { container } = render(<ServicesSection />)
+    expect(container.querySelector('#services')).toBeInTheDocument()
+  })
+
+  it('service cards have hover elevation class', () => {
+    const { container } = render(<ServicesSection />)
+    const cards = container.querySelectorAll('article')
+    cards.forEach((card) => {
+      expect(card.className).toContain('hover:-translate-y-2')
+    })
   })
 })

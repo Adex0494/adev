@@ -21,3 +21,9 @@ export type { Theme, ResolvedTheme } from './ThemeProvider'
 
 export { ThemeToggle } from './ThemeToggle'
 export type { ThemeToggleProps } from './ThemeToggle'
+
+export { Modal, ProjectIntakeModal, ContactModal } from './Modal'
+export type { ModalProps, ProjectIntakeModalProps, ContactModalProps } from './Modal'
+
+export { ScrollReveal } from './ScrollReveal'
+export type { ScrollRevealProps } from './ScrollReveal'

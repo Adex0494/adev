@@ -8,7 +8,7 @@ export function MedicaHighlightSection() {
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left: content */}
           <div>
-            <Badge className="mb-6 bg-primary/10 text-primary border-0">
+            <Badge variant="subtle" className="mb-6">
               {t('home.medica.badge')}
             </Badge>
             <Heading as="h2" className="mb-6">

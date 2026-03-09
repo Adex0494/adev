@@ -1,6 +1,8 @@
 import { t } from '@/i18n'
-import { Badge, Card, CardTitle, CardDescription, Container, Heading, Lead } from '@/components/ui'
+import { Badge, CardTitle, CardDescription, Container, Heading, Lead } from '@/components/ui'
+import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { homeServices } from '@/content/home'
+import { cn } from '@/lib/utils'
 
 const serviceIcons: Record<(typeof homeServices)[number], React.ReactNode> = {
   web: (
@@ -60,33 +62,61 @@ export function ServicesSection() {
   return (
     <section id="services" className="bg-background-secondary py-24">
       <Container size="xl">
-        <div className="mb-16 text-center">
-          <Badge className="mb-4 bg-primary/10 text-primary border-0">
-            {t('home.services.badge')}
-          </Badge>
-          <Heading as="h2" className="mb-4">
-            {t('home.services.heading')}
-          </Heading>
-          <Lead className="mx-auto max-w-2xl">
-            {t('home.services.subheading')}
-          </Lead>
-        </div>
+        <ScrollReveal>
+          <div className="mb-16 text-center">
+            <Badge variant="subtle" className="mb-4">
+              {t('home.services.badge')}
+            </Badge>
+            <Heading as="h2" className="mb-4">
+              {t('home.services.heading')}
+            </Heading>
+            <Lead className="mx-auto max-w-2xl">{t('home.services.subheading')}</Lead>
+          </div>
+        </ScrollReveal>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {homeServices.map((key) => (
-            <Card
-              key={key}
-              className="hover:-translate-y-1 hover:shadow-xl transition-all"
-            >
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                {serviceIcons[key]}
-              </div>
-              <CardTitle className="mb-2">{t(`home.services.items.${key}.title`)}</CardTitle>
-              <CardDescription>{t(`home.services.items.${key}.description`)}</CardDescription>
-            </Card>
+          {homeServices.map((key, i) => (
+            <ScrollReveal key={key} delay={i * 0.12} direction="up">
+              <ServiceCard serviceKey={key} />
+            </ScrollReveal>
           ))}
         </div>
       </Container>
     </section>
+  )
+}
+
+function ServiceCard({ serviceKey }: { serviceKey: (typeof homeServices)[number] }) {
+  return (
+    <article
+      className={cn(
+        'group relative rounded-xl border border-border bg-card p-6',
+        'cursor-default transition-all duration-300',
+        'hover:-translate-y-2 hover:border-primary/40',
+        'hover:shadow-[0_8px_32px_rgb(112_72_250/_0.15)]',
+      )}
+    >
+      {/* Subtle inner glow on hover */}
+      <div
+        className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background:
+            'radial-gradient(ellipse at top left, rgb(112 72 250 / 0.06), transparent 60%)',
+        }}
+        aria-hidden="true"
+      />
+
+      <div
+        className={cn(
+          'mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg',
+          'bg-primary/10 text-primary transition-all duration-300',
+          'group-hover:bg-primary/20 group-hover:scale-110',
+        )}
+      >
+        {serviceIcons[serviceKey]}
+      </div>
+      <CardTitle className="mb-2">{t(`home.services.items.${serviceKey}.title`)}</CardTitle>
+      <CardDescription>{t(`home.services.items.${serviceKey}.description`)}</CardDescription>
+    </article>
   )
 }

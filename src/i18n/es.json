@@ -14,7 +14,60 @@
     "about": "Nosotros",
     "services": "Servicios",
     "work": "Trabajo",
+    "process": "Proceso",
     "contact": "Contacto"
+  },
+  "form": {
+    "requiredHelper": "* Los campos marcados con asterisco son obligatorios.",
+    "name": {
+      "required": "El nombre es obligatorio.",
+      "min": "El nombre debe tener al menos 2 caracteres."
+    },
+    "email": {
+      "required": "El correo electrónico es obligatorio.",
+      "invalid": "Por favor, introduce un correo electrónico válido."
+    },
+    "budget": {
+      "required": "Por favor, selecciona un rango de presupuesto."
+    },
+    "description": {
+      "required": "La descripción del proyecto es obligatoria.",
+      "min": "La descripción debe tener al menos 10 caracteres."
+    }
+  },
+  "modal": {
+    "projectIntake": {
+      "title": "Iniciar un proyecto",
+      "subtitle": "Cuéntanos sobre tu proyecto y te responderemos en 24 horas.",
+      "name": "Tu nombre",
+      "namePlaceholder": "Ana García",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "ana@empresa.com",
+      "company": "Empresa",
+      "companyPlaceholder": "Tu empresa",
+      "budget": "Rango de presupuesto",
+      "budgetPlaceholder": "Selecciona un presupuesto",
+      "budgetSmall": "Menos de $10k",
+      "budgetMedium": "$10k – $50k",
+      "budgetLarge": "$50k – $100k",
+      "budgetEnterprise": "$100k+",
+      "description": "Descripción del proyecto",
+      "descriptionPlaceholder": "Cuéntanos sobre tus objetivos, plazos y requisitos...",
+      "submit": "Enviar solicitud",
+      "submitting": "Enviando..."
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "subtitle": "Te responderemos en 24 horas.",
+      "name": "Tu nombre",
+      "namePlaceholder": "Ana García",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "ana@empresa.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "¿Cómo podemos ayudarte?",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando..."
+    }
   },
   "home": {
     "header": {
@@ -116,7 +169,21 @@
       "subheading": "Cuéntanos sobre tu proyecto y te responderemos en 24 horas.",
       "button": "Iniciar un proyecto",
       "ctaPrimary": "Iniciar un proyecto",
-      "ctaSecondary": "Ver nuestro trabajo"
+      "ctaSecondary": "Ver nuestro trabajo",
+      "bookCall": "Reservar una llamada",
+      "bookCallSubtitle": "Agenda una llamada de 30 minutos",
+      "calendlyPlaceholder": "El calendario de Calendly aparecerá aquí",
+      "orDivider": "o envíanos un mensaje",
+      "sendMessage": "Enviar un mensaje",
+      "sendMessageSubtitle": "Respondemos en 24 horas",
+      "formName": "Tu nombre",
+      "formNamePlaceholder": "Ana García",
+      "formEmail": "Correo electrónico",
+      "formEmailPlaceholder": "ana@empresa.com",
+      "formMessage": "Mensaje",
+      "formMessagePlaceholder": "Cuéntanos sobre tu proyecto...",
+      "formSubmit": "Enviar mensaje",
+      "formSubmitting": "Enviando..."
     },
     "footer": {
       "logo": "ADEV",

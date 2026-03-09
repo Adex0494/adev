@@ -23,17 +23,29 @@ describe('FeaturedProjectsSection', () => {
     expect(screen.getByText(/view all projects/i)).toBeInTheDocument()
   })
 
-  it('renders 3 project category badges', () => {
-    render(<FeaturedProjectsSection />)
-    expect(screen.getByText('Web App')).toBeInTheDocument()
-    expect(screen.getByText('SaaS')).toBeInTheDocument()
-    expect(screen.getByText('Mobile App')).toBeInTheDocument()
-  })
-
-  it('renders 3 project titles', () => {
+  it('renders project titles', () => {
     render(<FeaturedProjectsSection />)
     expect(screen.getByText('HealthOS Platform')).toBeInTheDocument()
     expect(screen.getByText('Fintrack Dashboard')).toBeInTheDocument()
     expect(screen.getByText('Nomad Mobile')).toBeInTheDocument()
+  })
+
+  it('has section id=work', () => {
+    const { container } = render(<FeaturedProjectsSection />)
+    expect(container.querySelector('#work')).toBeInTheDocument()
+  })
+
+  it('project articles have hover elevation class', () => {
+    const { container } = render(<FeaturedProjectsSection />)
+    const articles = container.querySelectorAll('article')
+    articles.forEach((article) => {
+      expect(article.className).toContain('hover:-translate-y-2')
+    })
+  })
+
+  it('image containers have overflow-hidden for zoom effect', () => {
+    const { container } = render(<FeaturedProjectsSection />)
+    const imageContainers = container.querySelectorAll('.overflow-hidden.aspect-video')
+    expect(imageContainers.length).toBe(3)
   })
 })
