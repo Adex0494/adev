@@ -8,9 +8,9 @@ describe('SiteFooter', () => {
     expect(screen.getByRole('contentinfo')).toBeInTheDocument()
   })
 
-  it('renders the logo text', () => {
+  it('renders the logo image', () => {
     render(<SiteFooter />)
-    expect(screen.getByText('ADEV')).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: 'ADEV' })).toBeInTheDocument()
   })
 
   it('renders 3 column headings', () => {

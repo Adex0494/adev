@@ -1,5 +1,20 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Brand logo
+
+`reference-images/logo.png` is the single source of truth for the Adev logo.
+`public/logo/logo.png` is an unchanged, byte-for-byte copy served by the site.
+The header, footer, and social metadata share this asset through
+`src/lib/brand.ts`. Preserve the complete artwork, background, colors, and 3:2
+aspect ratio; do not crop, redraw, or apply visual filters. If the official source
+changes, copy it to the public path and update its dimensions in `src/lib/brand.ts`.
+
+Browser and application icons are derived only by cropping and scaling this source,
+preserving its colors, symbol, and transparency. Next.js automatically registers
+`src/app/icon.png` (512px), `src/app/apple-icon.png` (180px), and
+`src/app/favicon.ico` (16/32/48/64px). The icon crop is x=200, y=100,
+width=1136, height=824; scale proportionally onto a transparent square canvas.
+
 ## Getting Started
 
 First, run the development server:

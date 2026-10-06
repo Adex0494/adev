@@ -27,3 +27,9 @@ export type { ModalProps, ProjectIntakeModalProps, ContactModalProps } from './M
 
 export { ScrollReveal } from './ScrollReveal'
 export type { ScrollRevealProps } from './ScrollReveal'
+
+export { Logo } from './Logo'
+export type { LogoProps } from './Logo'
+
+export { LogoFull } from './LogoFull'
+export type { LogoFullProps } from './LogoFull'

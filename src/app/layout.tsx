@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/ui/ThemeProvider'
+import { ADEV_LOGO } from '@/lib/brand'
 import './globals.css'
 
 const geistSans = Geist({
@@ -17,6 +18,28 @@ export const metadata: Metadata = {
   title: 'ADEV — Digital Agency',
   description:
     'ADEV partners with ambitious companies to design, develop, and scale world-class digital products.',
+  openGraph: {
+    type: 'website',
+    siteName: 'ADEV',
+    title: 'ADEV — Digital Agency',
+    description:
+      'ADEV partners with ambitious companies to design, develop, and scale world-class digital products.',
+    images: [
+      {
+        url: ADEV_LOGO.src,
+        width: ADEV_LOGO.width,
+        height: ADEV_LOGO.height,
+        alt: 'ADEV — Digital Agency',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ADEV — Digital Agency',
+    description:
+      'ADEV partners with ambitious companies to design, develop, and scale world-class digital products.',
+    images: [ADEV_LOGO.src],
+  },
 }
 
 export default function RootLayout({

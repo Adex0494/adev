@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { t } from '@/i18n'
-import { Button, Container } from '@/components/ui'
+import { Button, Container, LogoFull } from '@/components/ui'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { ProjectIntakeModal } from '@/components/ui/Modal'
 import { cn } from '@/lib/utils'
@@ -48,9 +48,7 @@ export function SiteHeader() {
         <Container size="xl">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-xl font-bold text-transparent">
-              {t('home.header.logo')}
-            </span>
+            <LogoFull height={48} priority />
 
             {/* Nav */}
             <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">

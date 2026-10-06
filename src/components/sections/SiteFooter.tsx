@@ -1,5 +1,5 @@
 import { t } from '@/i18n'
-import { Container } from '@/components/ui'
+import { Container, Logo } from '@/components/ui'
 
 export function SiteFooter() {
   return (
@@ -8,9 +8,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-2 gap-12 py-16 lg:grid-cols-4">
           {/* Col 1: Logo + tagline */}
           <div className="col-span-2 lg:col-span-1">
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              {t('home.footer.logo')}
-            </span>
+            <Logo height={48} />
             <p className="mt-4 text-sm text-muted leading-relaxed">
               {t('home.footer.tagline')}
             </p>

@@ -13,9 +13,9 @@ function renderWithProvider() {
 }
 
 describe('SiteHeader', () => {
-  it('renders the logo', () => {
+  it('renders the logo image', () => {
     renderWithProvider()
-    expect(screen.getByText('ADEV')).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: 'ADEV' })).toBeInTheDocument()
   })
 
   it('renders the Get Started button', () => {
