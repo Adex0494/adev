@@ -1,4 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
+import { createRef } from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { Button } from './Button'
 
@@ -133,7 +134,7 @@ describe('Button', () => {
     })
 
     it('forwards ref', () => {
-      const ref = { current: null } as React.RefObject<HTMLButtonElement>
+      const ref = createRef<HTMLButtonElement>()
       render(<Button ref={ref}>Ref</Button>)
       expect(ref.current).toBeInstanceOf(HTMLButtonElement)
     })

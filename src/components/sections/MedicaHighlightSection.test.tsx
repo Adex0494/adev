@@ -13,11 +13,11 @@ describe('MedicaHighlightSection', () => {
     expect(screen.getByText('Case study')).toBeInTheDocument()
   })
 
-  it('renders the primaryGradient CTA button', () => {
+  it('links to the Medika zone with a document navigation', () => {
     render(<MedicaHighlightSection />)
-    const btn = screen.getByRole('button', { name: /read case study/i })
-    expect(btn).toBeInTheDocument()
-    expect(btn).toHaveClass('from-primary')
+    const link = screen.getByRole('link', { name: /view live demo/i })
+    expect(link).toHaveAttribute('href', '/medika')
+    expect(link).toHaveClass('from-primary')
   })
 
   it('renders the browser chrome frame', () => {

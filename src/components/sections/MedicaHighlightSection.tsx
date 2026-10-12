@@ -1,5 +1,5 @@
 import { t } from '@/i18n'
-import { Badge, Button, Container, Heading, Lead } from '@/components/ui'
+import { Badge, Container, Heading, Lead } from '@/components/ui'
 
 export function MedicaHighlightSection() {
   return (
@@ -17,9 +17,12 @@ export function MedicaHighlightSection() {
             <Lead className="mb-8">
               {t('home.medica.subheading')}
             </Lead>
-            <Button variant="primaryGradient" size="lg">
+            <a
+              href="/medika"
+              className="inline-flex h-12 items-center justify-center rounded-md px-7 text-base font-medium bg-gradient-to-r from-primary to-accent text-white hover:shadow-[0_0_20px_rgb(112_72_250/_0.4)] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
               {t('home.medica.cta')}
-            </Button>
+            </a>
           </div>
 
           {/* Right: browser frame mockup */}

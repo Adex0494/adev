@@ -1,13 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import { t } from '@/i18n'
 import { Badge, Button, Container, Heading, Lead } from '@/components/ui'
 import { ProjectIntakeModal } from '@/components/ui/Modal'
 import { useCountUp } from '@/hooks/useCountUp'
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (delay: number) => ({
     opacity: 1,
