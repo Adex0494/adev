@@ -5,7 +5,7 @@ import { ProcessSection } from './ProcessSection'
 describe('ProcessSection', () => {
   it('renders the section heading', () => {
     render(<ProcessSection />)
-    expect(screen.getByRole('heading', { name: /proven process/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /clear steps/i })).toBeInTheDocument()
   })
 
   it('renders the badge', () => {
@@ -24,9 +24,9 @@ describe('ProcessSection', () => {
   it('renders all 4 step titles', () => {
     render(<ProcessSection />)
     expect(screen.getByText('Discovery')).toBeInTheDocument()
-    expect(screen.getByText('Design')).toBeInTheDocument()
+    expect(screen.getByText('Design & planning')).toBeInTheDocument()
     expect(screen.getByText('Development')).toBeInTheDocument()
-    expect(screen.getByText('Launch')).toBeInTheDocument()
+    expect(screen.getByText('Launch & support')).toBeInTheDocument()
   })
 
   it('has section id=process', () => {
@@ -68,6 +68,6 @@ describe('ProcessSection', () => {
     const { container } = render(<ProcessSection />)
     const badge = container.querySelector('.bg-primary\\/10')
     expect(badge).toBeInTheDocument()
-    expect(badge).toHaveClass('text-primary')
+    expect(badge).toHaveClass('text-primary-text')
   })
 })

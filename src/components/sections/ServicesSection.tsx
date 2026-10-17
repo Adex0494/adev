@@ -1,4 +1,4 @@
-import { t } from '@/i18n'
+import { t as translate, type Locale } from '@/i18n'
 import { Badge, CardTitle, CardDescription, Container, Heading, Lead } from '@/components/ui'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { homeServices } from '@/content/home'
@@ -58,7 +58,9 @@ const serviceIcons: Record<(typeof homeServices)[number], React.ReactNode> = {
   ),
 }
 
-export function ServicesSection() {
+export interface ServicesSectionProps { locale?: Locale }
+export function ServicesSection({ locale = 'en' }: ServicesSectionProps) {
+  const t = (key: string) => translate(key, locale)
   return (
     <section id="services" className="bg-background-secondary py-24">
       <Container size="xl">
@@ -77,7 +79,7 @@ export function ServicesSection() {
         <div className="grid gap-8 md:grid-cols-3">
           {homeServices.map((key, i) => (
             <ScrollReveal key={key} delay={i * 0.12} direction="up">
-              <ServiceCard serviceKey={key} />
+              <ServiceCard serviceKey={key} locale={locale} />
             </ScrollReveal>
           ))}
         </div>
@@ -86,30 +88,27 @@ export function ServicesSection() {
   )
 }
 
-function ServiceCard({ serviceKey }: { serviceKey: (typeof homeServices)[number] }) {
+function ServiceCard({ serviceKey, locale }: { serviceKey: (typeof homeServices)[number]; locale: Locale }) {
+  const t = (key: string) => translate(key, locale)
   return (
     <article
       className={cn(
-        'group relative rounded-xl border border-border bg-card p-6',
+        'group relative h-full rounded-xl border border-border bg-card p-6',
         'cursor-default transition-all duration-300',
-        'hover:-translate-y-2 hover:border-primary/40',
+        'hover:-translate-y-1 hover:border-primary/40',
         'hover:shadow-[0_8px_32px_rgb(112_72_250/_0.15)]',
       )}
     >
       {/* Subtle inner glow on hover */}
       <div
-        className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{
-          background:
-            'radial-gradient(ellipse at top left, rgb(112 72 250 / 0.06), transparent 60%)',
-        }}
+        className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         aria-hidden="true"
       />
 
       <div
         className={cn(
           'mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg',
-          'bg-primary/10 text-primary transition-all duration-300',
+          'bg-primary/10 text-primary-text transition-all duration-300',
           'group-hover:bg-primary/20 group-hover:scale-110',
         )}
       >

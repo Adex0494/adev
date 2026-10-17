@@ -1,10 +1,12 @@
-import { t } from '@/i18n'
+import { t as translate, type Locale } from '@/i18n'
 import { Badge, Container, Heading, Lead } from '@/components/ui'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { homeProcessSteps } from '@/content/home'
 import { cn } from '@/lib/utils'
 
-export function ProcessSection() {
+export interface ProcessSectionProps { locale?: Locale }
+export function ProcessSection({ locale = 'en' }: ProcessSectionProps) {
+  const t = (key: string) => translate(key, locale)
   return (
     <section id="process" className="bg-background py-24">
       <Container size="xl">
@@ -31,7 +33,7 @@ export function ProcessSection() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {homeProcessSteps.map((key, i) => (
               <ScrollReveal key={key} delay={i * 0.12} direction="up">
-                <ProcessStep stepKey={key} isLast={i === homeProcessSteps.length - 1} />
+                <ProcessStep stepKey={key} locale={locale} isLast={i === homeProcessSteps.length - 1} />
               </ScrollReveal>
             ))}
           </div>
@@ -43,11 +45,14 @@ export function ProcessSection() {
 
 function ProcessStep({
   stepKey,
+  locale,
   isLast,
 }: {
   stepKey: (typeof homeProcessSteps)[number]
+  locale: Locale
   isLast: boolean
 }) {
+  const t = (key: string) => translate(key, locale)
   return (
     <div
       className={cn(
@@ -72,7 +77,7 @@ function ProcessStep({
             className="absolute inset-0 rounded-full bg-primary/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
             aria-hidden="true"
           />
-          <span className="relative z-10 text-2xl font-bold text-primary">
+          <span className="relative z-10 text-2xl font-bold text-primary-text">
             {t(`home.process.steps.${stepKey}.number`)}
           </span>
         </div>
@@ -90,7 +95,7 @@ function ProcessStep({
         )}
       </div>
 
-      <h3 className="mb-2 text-lg font-semibold text-foreground transition-colors duration-200 group-hover:text-primary">
+      <h3 className="mb-2 text-lg font-semibold text-foreground transition-colors duration-200 group-hover:text-primary-text">
         {t(`home.process.steps.${stepKey}.title`)}
       </h3>
       <p className="text-sm leading-relaxed text-muted">

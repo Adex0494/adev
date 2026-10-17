@@ -1,22 +1,30 @@
 {
   "common": {
     "logoAlt": "ADEV",
-    "learnMore": "Saber más",
-    "getInTouch": "Contactar",
-    "seeWork": "Ver nuestro trabajo",
-    "viewAll": "Ver todo",
     "close": "Cerrar",
-    "open": "Abrir",
     "lightMode": "Cambiar a modo claro",
-    "darkMode": "Cambiar a modo oscuro"
+    "darkMode": "Cambiar a modo oscuro",
+    "skip": "Saltar al contenido",
+    "navigation": "Navegación principal",
+    "menu": "Menú",
+    "language": "Switch to English",
+    "github": "Perfil de GitHub de Ariangel Díaz Espaillat (abre en otra pestaña)",
+    "linkedin": "Perfil de LinkedIn de Ariangel Díaz Espaillat (abre en otra pestaña)",
+    "email": "Escribir a Ariangel",
+    "demo": "Demo interactivo · Datos ficticios",
+    "enlarge": "Abrir captura completa (abre en otra pestaña)"
   },
   "nav": {
-    "home": "Inicio",
-    "about": "Nosotros",
+    "home": "Inicio de AKDEVIA",
     "services": "Servicios",
-    "work": "Trabajo",
+    "work": "Proyectos",
     "process": "Proceso",
+    "about": "Fundador",
     "contact": "Contacto"
+  },
+  "seo": {
+    "title": "AKDEVIA — Desarrollo de Software, Web y Aplicaciones",
+    "description": "Aplicaciones web a medida, sitios empresariales y productos digitales por Ariangel Díaz Espaillat. Conoce MEDIKA, una plataforma de gestión de consultas médicas."
   },
   "form": {
     "requiredHelper": "* Los campos marcados con asterisco son obligatorios.",
@@ -26,194 +34,193 @@
     },
     "email": {
       "required": "El correo electrónico es obligatorio.",
-      "invalid": "Por favor, introduce un correo electrónico válido."
+      "invalid": "Introduce un correo electrónico válido."
     },
     "budget": {
-      "required": "Por favor, selecciona un rango de presupuesto."
+      "required": "Selecciona un rango de presupuesto."
     },
     "description": {
       "required": "La descripción del proyecto es obligatoria.",
       "min": "La descripción debe tener al menos 10 caracteres."
-    }
+    },
+    "tooLong": "Este campo es demasiado largo.",
+    "error": "No se pudo enviar el mensaje. Puedes enviarlo directamente por correo con el enlace de abajo.",
+    "success": "Tu mensaje se ha enviado correctamente. Gracias por escribir.",
+    "fallback": "Tu mensaje aún no se ha enviado. Abre tu aplicación de correo para revisar y enviar el borrador.",
+    "openEmail": "Abrir borrador de correo",
+    "privacy": "Tus datos se utilizan únicamente para responder a tu consulta. No incluyas información sensible.",
+    "honeypot": "Deja este campo vacío",
+    "unconfigured": "Este formulario prepara un borrador. Revísalo y envíalo desde tu aplicación de correo."
   },
   "modal": {
     "projectIntake": {
       "title": "Iniciar un proyecto",
-      "subtitle": "Cuéntanos sobre tu proyecto y te responderemos en 24 horas.",
+      "subtitle": "Cuéntame qué quieres crear, para quién y qué necesitas resolver.",
       "name": "Tu nombre",
-      "namePlaceholder": "Ana García",
+      "namePlaceholder": "Tu nombre completo",
       "email": "Correo electrónico",
-      "emailPlaceholder": "ana@empresa.com",
-      "company": "Empresa",
-      "companyPlaceholder": "Tu empresa",
+      "emailPlaceholder": "tu@empresa.com",
+      "company": "Empresa (opcional)",
+      "companyPlaceholder": "Tu negocio",
       "budget": "Rango de presupuesto",
-      "budgetPlaceholder": "Selecciona un presupuesto",
-      "budgetSmall": "Menos de $10k",
-      "budgetMedium": "$10k – $50k",
-      "budgetLarge": "$50k – $100k",
-      "budgetEnterprise": "$100k+",
+      "budgetPlaceholder": "Selecciona un rango",
+      "budgetSmall": "Menos de US$2,500",
+      "budgetMedium": "US$2,500–10,000",
+      "budgetLarge": "US$10,000–25,000",
+      "budgetEnterprise": "US$25,000+",
+      "budgetUnsure": "Definámoslo juntos",
       "description": "Descripción del proyecto",
-      "descriptionPlaceholder": "Cuéntanos sobre tus objetivos, plazos y requisitos...",
-      "submit": "Enviar solicitud",
+      "descriptionPlaceholder": "Objetivos, funciones principales, plazo y producto existente, si lo hay...",
+      "submit": "Enviar consulta",
+      "prepare": "Preparar correo",
       "submitting": "Enviando..."
     },
     "contact": {
-      "title": "Contáctanos",
-      "subtitle": "Te responderemos en 24 horas.",
-      "name": "Tu nombre",
-      "namePlaceholder": "Ana García",
-      "email": "Correo electrónico",
-      "emailPlaceholder": "ana@empresa.com",
-      "message": "Mensaje",
-      "messagePlaceholder": "¿Cómo podemos ayudarte?",
-      "submit": "Enviar mensaje",
-      "submitting": "Enviando..."
+      "title": "Hablemos",
+      "subtitle": "Cuéntame sobre tu proyecto."
     }
   },
   "home": {
     "header": {
-      "logo": "ADEV",
-      "getStarted": "Comenzar"
+      "getStarted": "Iniciar un proyecto"
     },
     "hero": {
-      "tagline": "Agencia Digital",
-      "badge": "De confianza para equipos ambiciosos",
-      "title": "Creamos experiencias digitales que impulsan el crecimiento",
-      "subtitle": "ADEV colabora con empresas ambiciosas para diseñar, desarrollar y escalar productos digitales de clase mundial.",
-      "cta": "Ver nuestro trabajo",
-      "ctaSecondary": "Contáctanos",
+      "tagline": "Desarrollo de software y productos",
+      "badge": "Criterio propio. Ingeniería con propósito.",
+      "title": "Software a la medida de tu negocio.",
+      "subtitle": "AKDEVIA convierte tus ideas y retos diarios en aplicaciones web, sitios y productos digitales claros, útiles y preparados para evolucionar.",
       "ctaPrimary": "Iniciar un proyecto",
-      "stats": {
-        "projects": "120+",
-        "projectsLabel": "Proyectos entregados",
-        "clients": "80+",
-        "clientsLabel": "Clientes satisfechos",
-        "years": "8+",
-        "yearsLabel": "Años de experiencia"
-      }
+      "ctaSecondary": "Ver nuestro trabajo",
+      "note": "Trabaja directamente con quien desarrolla tu producto.",
+      "preview": "Un producto real, de la idea al software",
+      "previewLink": "Explorar MEDIKA",
+      "capabilities": "Aplicaciones web · Sitios web · Productos móviles"
     },
     "services": {
-      "badge": "Lo que hacemos",
-      "heading": "Servicios digitales de extremo a extremo",
-      "subheading": "De la estrategia al lanzamiento, cubrimos cada capa de tu producto digital.",
+      "badge": "Qué creamos",
+      "heading": "El software que tu negocio necesita.",
+      "subheading": "Desde una primera versión concreta hasta las herramientas que utilizas cada día.",
       "items": {
         "web": {
-          "title": "Desarrollo Web",
-          "description": "Aplicaciones web rápidas y escalables con tecnologías modernas y buenas prácticas."
+          "title": "Aplicaciones web y herramientas de negocio",
+          "description": "Plataformas, paneles y herramientas internas a medida que conectan tus datos y procesos diarios."
         },
         "mobile": {
-          "title": "Apps Móviles",
-          "description": "Experiencias móviles nativas y multiplataforma que deleitan a los usuarios en cada dispositivo."
+          "title": "Sitios web y productos móviles",
+          "description": "Sitios empresariales adaptables y desarrollo de aplicaciones móviles según tu público y tus prioridades."
         },
         "design": {
-          "title": "Diseño de Producto",
-          "description": "Investigación de usuarios, estrategia UX e interfaces que convierten visitantes en clientes."
+          "title": "MVP y evolución de productos",
+          "description": "Lleva tu idea a una primera versión funcional y mejora la interfaz, el rendimiento y las funciones con lo aprendido."
         }
       }
     },
     "projects": {
-      "badge": "Trabajo destacado",
-      "heading": "Productos de los que estamos orgullosos",
-      "subheading": "Una selección de proyectos donde superamos los límites del diseño y la ingeniería.",
-      "viewAll": "Ver todos los proyectos",
-      "items": {
-        "project1": {
-          "title": "Plataforma HealthOS",
-          "category": "Aplicación Web"
-        },
-        "project2": {
-          "title": "Panel Fintrack",
-          "category": "SaaS"
-        },
-        "project3": {
-          "title": "Nomad Mobile",
-          "category": "App Móvil"
-        }
-      }
+      "badge": "Proyecto destacado",
+      "heading": "Conoce MEDIKA.",
+      "subheading": "La gestión de consultas médicas en un solo espacio.",
+      "explore": "Explorar el caso de estudio",
+      "summary": "Un producto de software funcional que conecta expedientes de pacientes, consultas, recetas y la administración diaria de un consultorio.",
+      "type": "Plataforma de gestión de consultas médicas",
+      "role": "Desarrollo de producto · Ingeniería de interfaces · Diseño de procesos",
+      "stack": "Next.js · TypeScript · Supabase",
+      "imageAlt": "Directorio del demo de MEDIKA con búsqueda, filtros y pacientes ficticios"
     },
     "medica": {
-      "badge": "Caso de estudio",
-      "heading": "Medica — Salud reimaginada",
-      "subheading": "Diseñamos y construimos una plataforma integral de gestión sanitaria que atiende a más de 50.000 pacientes en 12 clínicas. Desde el alta del paciente hasta diagnósticos asistidos por IA.",
-      "cta": "Ver demo en vivo"
+      "badge": "Dentro del producto",
+      "heading": "Menos cambios de pantalla. Más contexto.",
+      "subheading": "MEDIKA conecta las etapas de una consulta para que el equipo clínico trabaje con la misma información del paciente.",
+      "cta": "Abrir demo en vivo",
+      "demoNote": "El demo público utiliza registros ficticios y sanitizados. Explóralo sin introducir datos reales de pacientes.",
+      "problemTitle": "El reto",
+      "problem": "La información del paciente y las tareas del consultorio deben mantenerse conectadas, desde la sala de espera hasta el registro de la consulta.",
+      "solutionTitle": "La solución",
+      "solution": "Un espacio para expedientes, historial clínico, diagnósticos, recetas y documentos, con flujos diferenciados para médicos y secretaría.",
+      "engineeringTitle": "Ingeniería aplicada",
+      "engineering": "Procesos conectados, registros estructurados e interfaces según el rol convierten MEDIKA en un ejemplo concreto de cómo AKDEVIA desarrolla software de negocio.",
+      "gallery": "MEDIKA en detalle",
+      "screenshots": "Capturas del demo público. Todos los pacientes mostrados son ficticios.",
+      "patients": {
+        "title": "Tus pacientes, a la vista",
+        "description": "Busca y filtra el directorio para encontrar al paciente y abrir su expediente.",
+        "alt": "Directorio de MEDIKA con pacientes Demo ficticios, búsqueda y filtros demográficos"
+      },
+      "history": {
+        "title": "El contexto clínico en un solo lugar",
+        "description": "Revisa los datos del paciente y sus consultas anteriores antes de la próxima visita.",
+        "alt": "Expediente e historial de consultas de un paciente Demo ficticio en MEDIKA"
+      },
+      "consultation": {
+        "title": "Un registro de consulta conectado",
+        "description": "Reúne notas clínicas, diagnósticos, recetas y documentos dentro del mismo proceso.",
+        "alt": "Registro de consulta de MEDIKA con notas clínicas ficticias y flujo de recetas"
+      },
+      "templates": {
+        "title": "Documentos integrados al trabajo",
+        "description": "Administra plantillas para los documentos y la información clínica que necesita el consultorio.",
+        "alt": "Interfaz de gestión de plantillas de documentos del demo de MEDIKA"
+      },
+      "reports": {
+        "title": "Visibilidad de la actividad del consultorio",
+        "description": "Consulta la actividad de las consultas desde el espacio de reportes.",
+        "alt": "Espacio de reportes del demo de MEDIKA con filtros de actividad de consultas"
+      }
     },
     "process": {
       "badge": "Cómo trabajamos",
-      "heading": "Un proceso probado para grandes resultados",
-      "subheading": "Cuatro fases claras que llevan tu idea desde el concepto hasta un producto en vivo y pulido.",
+      "heading": "Pasos claros. Objetivos compartidos.",
+      "subheading": "Sabes qué se está construyendo, por qué es importante y qué viene después.",
       "steps": {
         "discovery": {
           "number": "01",
           "title": "Descubrimiento",
-          "description": "Profundizamos en tus objetivos de negocio, usuarios y mercado para construir una base sólida."
+          "description": "Entendemos tu negocio, tus usuarios y el problema que vale la pena resolver."
         },
         "design": {
           "number": "02",
-          "title": "Diseño",
-          "description": "Wireframes, prototipos y diseños de alta fidelidad creados pensando en tus usuarios."
+          "title": "Diseño y planificación",
+          "description": "Definimos prioridades, organizamos los procesos y simplificamos la interfaz."
         },
         "development": {
           "number": "03",
           "title": "Desarrollo",
-          "description": "Código limpio, probado y escalable entregado en sprints focalizados con total transparencia."
+          "description": "Construimos por etapas, compartimos avances y revisamos juntos el software funcionando."
         },
         "launch": {
           "number": "04",
-          "title": "Lanzamiento",
-          "description": "Despliegue sin problemas, monitoreo y soporte continuo para mantener todo funcionando."
+          "title": "Lanzamiento y soporte",
+          "description": "Preparamos la publicación, documentamos la entrega y planificamos mantenimiento y mejoras."
         }
       }
     },
+    "founder": {
+      "badge": "La persona detrás de AKDEVIA",
+      "heading": "Colaboración directa. Ingeniería cuidadosa.",
+      "role": "Desarrollador de software / Fundador",
+      "description": "Soy Ariangel Díaz Espaillat. Desarrollo software a través de AKDEVIA, con atención a los procesos reales, las interfaces claras y el código mantenible.",
+      "approach": "Trabajas directamente conmigo desde la primera conversación hasta la implementación. MEDIKA es un ejemplo funcional de ese enfoque.",
+      "technical": "Para equipos de ingeniería",
+      "technicalBody": "Explora el producto en vivo y mi código público para conocer cómo abordo las interfaces, la estructura de las aplicaciones y los procesos de negocio.",
+      "github": "Explorar mi GitHub",
+      "linkedin": "Conectar en LinkedIn"
+    },
     "cta": {
-      "badge": "Trabajemos juntos",
-      "heading": "¿Listo para construir algo grande?",
-      "subheading": "Cuéntanos sobre tu proyecto y te responderemos en 24 horas.",
-      "button": "Iniciar un proyecto",
-      "ctaPrimary": "Iniciar un proyecto",
-      "ctaSecondary": "Ver nuestro trabajo",
-      "bookCall": "Reservar una llamada",
-      "bookCallSubtitle": "Agenda una llamada de 30 minutos",
-      "calendlyPlaceholder": "El calendario de Calendly aparecerá aquí",
-      "orDivider": "o envíanos un mensaje",
-      "sendMessage": "Enviar un mensaje",
-      "sendMessageSubtitle": "Respondemos en 24 horas",
-      "formName": "Tu nombre",
-      "formNamePlaceholder": "Ana García",
-      "formEmail": "Correo electrónico",
-      "formEmailPlaceholder": "ana@empresa.com",
-      "formMessage": "Mensaje",
-      "formMessagePlaceholder": "Cuéntanos sobre tu proyecto...",
-      "formSubmit": "Enviar mensaje",
-      "formSubmitting": "Enviando..."
+      "badge": "Hablemos",
+      "heading": "¿Qué te gustaría crear?",
+      "subheading": "Un producto nuevo, un mejor sitio web o una herramienta que simplifique tu trabajo. Empecemos por el problema que quieres resolver.",
+      "bookCall": "Agendar una llamada",
+      "bookCallSubtitle": "Elige un horario para una conversación inicial.",
+      "directTitle": "Iniciemos una conversación",
+      "directBody": "Cuéntame sobre tu idea, tu negocio o una vacante que buscas cubrir. Podemos definir un próximo paso concreto.",
+      "sendMessage": "Consulta de proyecto",
+      "email": "Escribir un correo",
+      "response": "Tu consulta llega directamente a Ariangel."
     },
     "footer": {
-      "logo": "ADEV",
-      "tagline": "Construyendo experiencias digitales que importan.",
-      "company": {
-        "heading": "Empresa",
-        "about": "Nosotros",
-        "work": "Trabajo",
-        "careers": "Empleos",
-        "blog": "Blog"
-      },
-      "services": {
-        "heading": "Servicios",
-        "web": "Desarrollo Web",
-        "mobile": "Apps Móviles",
-        "design": "Diseño de Producto",
-        "strategy": "Estrategia Digital"
-      },
-      "connect": {
-        "heading": "Conectar",
-        "github": "GitHub",
-        "linkedin": "LinkedIn",
-        "twitter": "Twitter"
-      },
-      "copyright": "© 2025 ADEV. Todos los derechos reservados."
+      "tagline": "Software con propósito para necesidades reales.",
+      "navigation": "Explorar",
+      "connect": "Conectar",
+      "copyright": "Todos los derechos reservados."
     }
-  },
-  "footer": {
-    "tagline": "Construyendo experiencias digitales que importan.",
-    "copyright": "© 2025 ADEV. Todos los derechos reservados."
   }
 }

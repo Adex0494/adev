@@ -1,18 +1,18 @@
-# ADEV and MEDIKA: independent Next.js zones
+# AKDEVIA and MEDIKA: independent Next.js zones
 
 This uses official Next.js external rewrites, not Vercel Microfrontends.
 The repositories remain independent; there is no shared build or dependency.
 
 | Vercel project | GitHub repository | Production branch | Public routes |
 | --- | --- | --- | --- |
-| akdevia-web | https://github.com/Adex0494/adev | master | `/` and everything except `/medika` |
+| akdevia | https://github.com/Adex0494/adev | master | `/` and everything except `/medika` |
 | medika-demo | https://github.com/Adex0494/Clinika | medika-demo | `/medika` and `/medika/*` |
 
 MEDIKA's existing `main` branch participates in the real production release
 workflow. This integration is committed to `medika-demo` instead. Select that
 branch manually as the demo project's Production Branch. Do not merge/push
 these changes to `main` as part of the portfolio deployment. Future demo
-updates deploy only medika-demo; ADEV commits deploy only akdevia-web. Bring
+updates deploy only medika-demo; AKDEVIA commits deploy only akdevia. Bring
 future reviewed application changes into the demo branch separately.
 
 ## Manual Vercel configuration
@@ -25,12 +25,12 @@ future reviewed application changes into the demo branch separately.
    allow unauthenticated proxy requests: configure Deployment Protection for
    this public demo as appropriate. A protected preview URL is not a suitable
    origin. Never add a bypass secret to a public URL.
-3. Import adev as **akdevia-web**, repository root, Next.js preset, Production
+3. Import adev as **akdevia**, repository root, Next.js preset, Production
    Branch `master`, install `npm ci`, build `npm run build`.
 4. Add **SERVER-ONLY** `MEDIKA_DEMO_ORIGIN=https://<stable-medika-demo-production-domain>`
-   to akdevia-web. It is an origin, without `/medika`, query strings or credentials.
+   to akdevia. It is an origin, without `/medika`, query strings or credentials.
    Trailing slash is normalized. No `NEXT_PUBLIC_MEDIKA_DEMO_ORIGIN` is needed.
-5. Only akdevia-web owns `akdevia.com` (and optionally `www.akdevia.com`). Attach
+5. Only akdevia owns `akdevia.com` (and optionally `www.akdevia.com`). Attach
    domains and configure Namecheap DNS manually. No Vercel/DNS changes are
    automated by this repository.
 
@@ -55,8 +55,8 @@ Do not put Supabase keys or the demo password in this repository.
 
 ## Validation and rollback
 
-Run `node node_modules/typescript/bin/tsc --noEmit`, `npm run lint`,
-`npm test -- --run`, and `npm run build`. Check `/` and the demo CTA, then
+Run `npm run typecheck`, `npm run lint`,
+`npm test`, and `npm run build`. Check `/` and the demo CTA, then
 `/medika`, `/medika/login`, dashboard/patients/waiting-room, demo-session POST,
 JS/CSS/image requests and authenticated attachment/document downloads.
 Review browser behavior after importing both projects; HTTP rendering alone

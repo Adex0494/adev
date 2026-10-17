@@ -1,56 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AKDEVIA
 
-## Brand logo
+Bilingual software-business website and engineering portfolio for
+Ariangel Díaz Espaillat. Next.js App Router, strict TypeScript, Tailwind CSS,
+React Hook Form, Zod and Vitest. npm is the package manager.
 
-`reference-images/logo.png` is the single source of truth for the Adev logo.
-`public/logo/logo.png` is an unchanged, byte-for-byte copy served by the site.
-The header, footer, and social metadata share this asset through
-`src/lib/brand.ts`. Preserve the complete artwork, background, colors, and 3:2
-aspect ratio; do not crop, redraw, or apply visual filters. If the official source
-changes, copy it to the public path and update its dimensions in `src/lib/brand.ts`.
+## Development
 
-Browser and application icons are derived only by cropping and scaling this source,
-preserving its colors, symbol, and transparency. Next.js automatically registers
-`src/app/icon.png` (512px), `src/app/apple-icon.png` (180px), and
-`src/app/favicon.ico` (16/32/48/64px). The icon crop is x=200, y=100,
-width=1136, height=824; scale proportionally onto a transparent square canvas.
-
-## Getting Started
-
-First, run the development server:
-
-```bash
+```text
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run typecheck
+npm test
+npm run test:coverage
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 for English or http://localhost:3000/?lang=es for
+Spanish. Keep both translation files in `src/i18n/` aligned. Server-rendered
+sections receive the selected locale; only interactive controls use client code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copy `.env.example` to ignored `.env.local` when configuring integrations.
+No email provider or calendar account is required: the contact form offers a
+truthful prefilled email draft until server-side mail delivery is configured.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Production and integrations
 
-## Learn More
+- [Production handoff](docs/production-readiness.md): contact setup, scheduling,
+  screenshot provenance, SEO, accessibility and domain-launch checklist.
+- [Independent MEDIKA zone](docs/multi-zone-deployment.md): external rewrites and
+  demo-only environment boundaries. Public demo links always use `/medika`.
+- `src/lib/site.ts`: real business/contact/profile URLs and future canonical domain.
+- `src/lib/brand.ts`: centralized official logo asset and dimensions.
 
-To learn more about Next.js, take a look at the following resources:
+GitHub: https://github.com/Adex0494/adev · Production branch: `master`.
+Vercel project: **AKDEVIA** · Current public site: https://akdevia.vercel.app.
+Future canonical domain: https://akdevia.com. DNS and domain attachment are manual.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Official logo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`reference-images/logo.png` is the source of truth.
+`public/logo/logo.png` is an unchanged byte-for-byte copy. Preserve the complete
+artwork, background, colors and 3:2 aspect ratio; do not crop, redraw or filter it.
+The business name is AKDEVIA; the established logo artwork retains ADEV.
 
-## Deploy on Vercel
+Browser/application icons are derived from this source, preserving its colors,
+symbol and transparency. Next.js registers `src/app/icon.png` (512px),
+`src/app/apple-icon.png` (180px) and `src/app/favicon.ico` (16/32/48/64px).
+The icon crop is x=200, y=100, width=1136, height=824, scaled proportionally onto
+a transparent square canvas.
 
-See [the two-project deployment handoff](docs/multi-zone-deployment.md) for
-the MEDIKA demo zone, environment variables and independent Git deployments.
-Use npm and `package-lock.json`; the old pnpm lockfile did not match the package
-manifest. Validate dependency installation with `npm ci`.
+## Security and rollback
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Never commit credentials or use `NEXT_PUBLIC_` for email secrets. Screenshots
+must come only from the sanitized public MEDIKA demo. Do not access or modify
+MEDIKA production or patient data. Keep normal Git history; rollback through a
+revert commit or an earlier AKDEVIA deployment. See the production handoff for
+current integration limitations and specific launch checks.

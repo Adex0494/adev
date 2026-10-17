@@ -1,32 +1,19 @@
-import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { MedicaHighlightSection } from './MedicaHighlightSection'
-
-describe('MedicaHighlightSection', () => {
-  it('renders the section heading', () => {
-    render(<MedicaHighlightSection />)
-    expect(screen.getByRole('heading', { name: /medica/i })).toBeInTheDocument()
-  })
-
-  it('renders the badge', () => {
-    render(<MedicaHighlightSection />)
-    expect(screen.getByText('Case study')).toBeInTheDocument()
-  })
-
-  it('links to the Medika zone with a document navigation', () => {
-    render(<MedicaHighlightSection />)
-    const link = screen.getByRole('link', { name: /view live demo/i })
-    expect(link).toHaveAttribute('href', '/medika')
-    expect(link).toHaveClass('from-primary')
-  })
-
-  it('renders the browser chrome frame', () => {
-    render(<MedicaHighlightSection />)
-    expect(screen.getByTestId('browser-frame')).toBeInTheDocument()
-  })
-
-  it('renders subheading text', () => {
-    render(<MedicaHighlightSection />)
-    expect(screen.getByText(/50,000\+ patients/i)).toBeInTheDocument()
+import type { Locale } from '@/i18n'
+describe.each(['en','es'] as Locale[])('MEDIKA case study in %s', locale => {
+  it('renders four responsive, accessible demo images and the public demo link', () => {
+    render(<MedicaHighlightSection locale={locale} />)
+    const images = screen.getAllByRole('img')
+    expect(images).toHaveLength(4)
+    images.forEach(image => {
+      expect(image.getAttribute('alt')?.length).toBeGreaterThan(20)
+      expect(image).toHaveAttribute('loading','lazy')
+      expect(image).toHaveAttribute('width','1440')
+      expect(image).toHaveAttribute('height','900')
+    })
+    expect(document.querySelector('a[href="/medika"]')).toBeInTheDocument()
+    expect(document.querySelector('[href*="medika-demo.vercel.app"]')).toBeNull()
+    expect(document.querySelectorAll('a[target="_blank"][rel="noopener noreferrer"]')).toHaveLength(4)
   })
 })

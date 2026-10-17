@@ -33,3 +33,6 @@ export type { LogoProps } from './Logo'
 
 export { LogoFull } from './LogoFull'
 export type { LogoFullProps } from './LogoFull'
+
+export { ProjectForm } from './ProjectForm'
+export type { ProjectFormProps } from './ProjectForm'

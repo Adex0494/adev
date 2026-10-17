@@ -19,7 +19,7 @@ function resolve(obj: unknown, keys: string[]): string {
 /**
  * Translates a dot-notation key to a string for the given locale.
  *
- * @example t('home.hero.title') => "We build digital experiences..."
+ * @example t('home.hero.title') => "Software built around your business."
  * @example t('nav.contact', 'es') => "Contacto"
  */
 export function t(key: string, locale: Locale = defaultLocale): string {

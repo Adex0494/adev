@@ -1,60 +1,20 @@
-import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
+import { afterEach, vi } from 'vitest'
 import { FinalCTASection } from './FinalCTASection'
-
-describe('FinalCTASection', () => {
-  it('renders the heading', () => {
+import { site } from '@/lib/site'
+afterEach(()=>vi.unstubAllEnvs())
+describe('Contact and scheduling', () => {
+  it('uses email and a truthful draft fallback when unconfigured', () => {
+    vi.stubEnv('NEXT_PUBLIC_CALENDLY_URL','')
     render(<FinalCTASection />)
-    expect(screen.getByRole('heading', { name: /ready to build/i })).toBeInTheDocument()
+    expect(screen.queryByRole('link',{name:/book a call/i})).not.toBeInTheDocument()
+    expect(screen.getByRole('link',{name:site.email})).toHaveAttribute('href',`mailto:${site.email}`)
+    expect(screen.getByRole('button',{name:/prepare email/i})).toBeInTheDocument()
   })
-
-  it('renders the badge', () => {
-    render(<FinalCTASection />)
-    expect(screen.getByText("Let's work together")).toBeInTheDocument()
-  })
-
-  it('renders the Book a Call heading', () => {
-    render(<FinalCTASection />)
-    expect(screen.getByText('Book a Call')).toBeInTheDocument()
-  })
-
-  it('renders the Send a Message heading', () => {
-    render(<FinalCTASection />)
-    expect(screen.getByText('Send a Message')).toBeInTheDocument()
-  })
-
-  it('renders the contact form', () => {
-    render(<FinalCTASection />)
-    expect(screen.getByRole('form', { name: /send a message/i })).toBeInTheDocument()
-  })
-
-  it('renders name field', () => {
-    render(<FinalCTASection />)
-    expect(screen.getByLabelText(/your name/i)).toBeInTheDocument()
-  })
-
-  it('renders email field', () => {
-    render(<FinalCTASection />)
-    expect(screen.getByLabelText(/email address/i)).toBeInTheDocument()
-  })
-
-  it('renders message textarea', () => {
-    render(<FinalCTASection />)
-    expect(screen.getByLabelText('Message')).toBeInTheDocument()
-  })
-
-  it('renders form submit button', () => {
-    render(<FinalCTASection />)
-    expect(screen.getByRole('button', { name: /send message/i })).toBeInTheDocument()
-  })
-
-  it('has section id=contact', () => {
-    const { container } = render(<FinalCTASection />)
-    expect(container.querySelector('#contact')).toBeInTheDocument()
-  })
-
-  it('renders calendly placeholder', () => {
-    render(<FinalCTASection />)
-    expect(screen.getByText(/calendly/i)).toBeInTheDocument()
+  it('shows only a configured real HTTPS Calendly event', () => {
+    vi.stubEnv('NEXT_PUBLIC_CALENDLY_URL','https://calendly.com/configured-account/discovery')
+    render(<FinalCTASection emailConfigured />)
+    expect(screen.getByRole('link',{name:/book a call/i})).toHaveAttribute('href','https://calendly.com/configured-account/discovery')
+    expect(screen.getByRole('button',{name:/send request/i})).toBeInTheDocument()
   })
 })

@@ -29,7 +29,7 @@ class MockIntersectionObserver implements IntersectionObserver {
 global.IntersectionObserver = MockIntersectionObserver as unknown as typeof IntersectionObserver
 
 // matchMedia is not available in jsdom
-Object.defineProperty(window, 'matchMedia', {
+if (typeof window !== 'undefined') Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: (query: string) => ({
     matches: false,

@@ -9,7 +9,7 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 
 const variantClasses: Record<BadgeVariant, string> = {
   default: 'bg-primary text-primary-foreground',
-  subtle: 'bg-primary/10 text-primary',
+  subtle: 'bg-primary/10 text-primary-text',
   success: 'bg-success text-white',
   warning: 'bg-warning text-white',
   danger: 'bg-danger text-white',

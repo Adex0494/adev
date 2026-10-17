@@ -1,69 +1,43 @@
-import { t } from '@/i18n'
+import Image from 'next/image'
+import { t, type Locale } from '@/i18n'
 import { Badge, Container, Heading, Lead } from '@/components/ui'
-
-export function MedicaHighlightSection() {
-  return (
-    <section className="bg-background-secondary py-24">
-      <Container size="xl">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          {/* Left: content */}
-          <div>
-            <Badge variant="subtle" className="mb-6">
-              {t('home.medica.badge')}
-            </Badge>
-            <Heading as="h2" className="mb-6">
-              {t('home.medica.heading')}
-            </Heading>
-            <Lead className="mb-8">
-              {t('home.medica.subheading')}
-            </Lead>
-            <a
-              href="/medika"
-              className="inline-flex h-12 items-center justify-center rounded-md px-7 text-base font-medium bg-gradient-to-r from-primary to-accent text-white hover:shadow-[0_0_20px_rgb(112_72_250/_0.4)] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-            >
-              {t('home.medica.cta')}
-            </a>
-          </div>
-
-          {/* Right: browser frame mockup */}
-          <div
-            data-testid="browser-frame"
-            className="rounded-xl border border-border shadow-2xl bg-card-elevated overflow-hidden"
-          >
-            {/* Chrome bar */}
-            <div className="flex h-10 items-center gap-2 border-b border-border bg-card px-4">
-              <span className="h-3 w-3 rounded-full bg-danger/70" />
-              <span className="h-3 w-3 rounded-full bg-warning/70" />
-              <span className="h-3 w-3 rounded-full bg-success/70" />
-              <div className="ml-4 h-5 flex-1 rounded-full bg-background-secondary" />
-            </div>
-            {/* Screen content */}
-            <div className="aspect-[4/3] bg-background-secondary p-6">
-              <div className="mb-4 flex items-center gap-4">
-                <div className="h-8 w-8 rounded-full bg-primary/20" />
-                <div className="h-3 w-32 rounded bg-border" />
-              </div>
-              <div className="grid grid-cols-3 gap-3 mb-4">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="rounded-lg bg-card p-3">
-                    <div className="mb-2 h-2 w-1/2 rounded bg-border" />
-                    <div className="h-5 w-3/4 rounded bg-primary/10" />
-                  </div>
-                ))}
-              </div>
-              <div className="space-y-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="flex items-center gap-3 rounded bg-card px-3 py-2">
-                    <div className="h-6 w-6 rounded-full bg-border-subtle" />
-                    <div className="h-2 flex-1 rounded bg-border" />
-                    <div className="h-2 w-12 rounded bg-border-subtle" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
-  )
+import { site } from '@/lib/site'
+export interface MedicaHighlightSectionProps { locale?: Locale }
+const screenshots = [
+  { key: 'patients', file: 'medika-patients' },
+  { key: 'history', file: 'medika-patient-history' },
+  { key: 'consultation', file: 'medika-consultation' },
+  { key: 'reports', file: 'medika-reports' },
+] as const
+export function MedicaHighlightSection({ locale = 'en' }: MedicaHighlightSectionProps) {
+  const text = (key: string) => t(key, locale)
+  return <section id="medika-case-study" aria-labelledby="case-title" className="bg-background-secondary py-20 lg:py-24">
+    <Container size="xl">
+      <div className="mb-10 max-w-3xl">
+        <Badge variant="subtle" className="mb-4">{text('home.medica.badge')}</Badge>
+        <Heading as="h2" id="case-title" className="mb-4">{text('home.medica.heading')}</Heading>
+        <Lead>{text('home.medica.subheading')}</Lead>
+      </div>
+      <div className="mb-14 grid gap-8 md:grid-cols-3">
+        {['problem', 'solution', 'engineering'].map(key => <div key={key} className="border-t border-border pt-5">
+          <h3 className="mb-3 text-lg font-semibold">{text(`home.medica.${key}Title`)}</h3>
+          <p className="text-sm leading-relaxed text-muted">{text(`home.medica.${key}`)}</p>
+        </div>)}
+      </div>
+      <h3 className="mb-2 text-2xl font-semibold">{text('home.medica.gallery')}</h3>
+      <p className="mb-8 text-sm text-muted">{text('home.medica.screenshots')}</p>
+      <div className="grid gap-6 md:grid-cols-2">
+        {screenshots.map(({ key, file }) => <figure key={key} className="overflow-hidden rounded-xl border border-border bg-card">
+          <a href={`/projects/medika/${file}.webp`} target="_blank" rel="noopener noreferrer" aria-label={`${text(`home.medica.${key}.title`)} — ${text('common.enlarge')}`} className="block bg-background p-2 sm:p-3">
+            <Image src={`/projects/medika/${file}.webp`} width={1440} height={900} sizes="(min-width: 1280px) 580px, (min-width: 768px) 46vw, 92vw" alt={text(`home.medica.${key}.alt`)} loading="lazy" className="h-auto w-full rounded-md border border-border-subtle" />
+          </a>
+          <figcaption className="p-5"><h4 className="mb-2 font-semibold">{text(`home.medica.${key}.title`)}</h4><p className="text-sm leading-relaxed text-muted">{text(`home.medica.${key}.description`)}</p></figcaption>
+        </figure>)}
+      </div>
+      <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+        <a href={site.medika} className="action-link shrink-0">{text('home.medica.cta')} <span aria-hidden="true">↗</span></a>
+        <p className="max-w-xl text-xs leading-relaxed text-muted">{text('home.medica.demoNote')}</p>
+      </div>
+    </Container>
+  </section>
 }

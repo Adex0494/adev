@@ -3,6 +3,8 @@
 /* ─── Brand tokens (same light & dark) ──────────────────────────────────── */
 :root {
   --primary: 112 72 250;
+  --primary-text: 91 44 215;
+  --danger-text: 185 28 28;
   --accent: 158 112 252;
   --accent2: 0 194 255;
   --ring: 128 88 252;
@@ -27,6 +29,8 @@
 
 /* ─── Design tokens: dark premium (unchanged) ────────────────────────────── */
 .dark {
+  --primary-text: 186 160 255;
+  --danger-text: 252 165 165;
   --bg: 10 15 28;
   --bg-secondary: 15 23 42;
   --card: 17 24 39;
@@ -50,6 +54,8 @@
   --color-border: rgb(var(--border));
   --color-border-subtle: rgb(var(--border-subtle));
   --color-primary: rgb(var(--primary));
+  --color-primary-text: rgb(var(--primary-text));
+  --color-danger-text: rgb(var(--danger-text));
   --color-primary-foreground: rgb(var(--primary-foreground));
   --color-accent: rgb(var(--accent));
   --color-accent2: rgb(var(--accent2));
@@ -67,7 +73,7 @@
 body {
   background: rgb(var(--bg));
   color: rgb(var(--fg));
-  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
 }
 
 /* ─── Keyframe animations ────────────────────────────────────────────────── */
@@ -119,4 +125,32 @@ body {
 /* ─── Smooth scrolling ───────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+}
+
+section[id], main[id] { scroll-margin-top: 6rem; }
+a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 2px solid rgb(var(--ring));
+  outline-offset: 4px;
+}
+.action-link {
+  display: inline-flex; align-items: center; justify-content: center; gap: .65rem;
+  min-height: 3rem; padding: .75rem 1.25rem; border-radius: .5rem;
+  background: rgb(var(--primary)); color: rgb(var(--primary-foreground));
+  font-size: .875rem; font-weight: 600; transition: background .2s, box-shadow .2s;
+}
+.action-link:hover { box-shadow: 0 4px 20px rgb(var(--primary) / .18); }
+.action-secondary { background: transparent; color: rgb(var(--fg)); border: 1px solid rgb(var(--border)); }
+.action-secondary:hover { background: rgb(var(--bg-secondary)); }
+.form-input {
+  width: 100%; min-height: 2.75rem; border: 1px solid rgb(var(--border)); border-radius: .5rem;
+  padding: .7rem .85rem; background: rgb(var(--bg)); color: rgb(var(--fg)); font-size: 1rem;
+}
+.form-input[aria-invalid="true"] { border-color: rgb(var(--danger)); }
+.form-input::placeholder { color: rgb(var(--muted)); opacity: 1; }
+.skip-link { position: fixed; top: .5rem; left: .5rem; z-index: 200; transform: translateY(-200%); padding: .75rem 1rem; border-radius: .5rem; background: rgb(var(--primary)); color: rgb(var(--primary-foreground)); }
+.skip-link:focus { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }

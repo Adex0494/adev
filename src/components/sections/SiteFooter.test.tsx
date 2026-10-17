@@ -1,39 +1,18 @@
-import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { SiteFooter } from './SiteFooter'
-
+import { site } from '@/lib/site'
 describe('SiteFooter', () => {
-  it('has the contentinfo (footer) role', () => {
+  it('contains only real professional profiles and email', () => {
     render(<SiteFooter />)
-    expect(screen.getByRole('contentinfo')).toBeInTheDocument()
-  })
-
-  it('renders the logo image', () => {
-    render(<SiteFooter />)
-    expect(screen.getByRole('img', { name: 'ADEV' })).toBeInTheDocument()
-  })
-
-  it('renders 3 column headings', () => {
-    render(<SiteFooter />)
-    expect(screen.getByText('Company')).toBeInTheDocument()
-    expect(screen.getByText('Services')).toBeInTheDocument()
-    expect(screen.getByText('Connect')).toBeInTheDocument()
-  })
-
-  it('renders 3 social links with aria-labels', () => {
-    render(<SiteFooter />)
-    expect(screen.getByRole('link', { name: 'GitHub' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'LinkedIn' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Twitter' })).toBeInTheDocument()
-  })
-
-  it('renders copyright text', () => {
-    render(<SiteFooter />)
-    expect(screen.getByText(/© 2025 ADEV/)).toBeInTheDocument()
-  })
-
-  it('renders the tagline', () => {
-    render(<SiteFooter />)
-    expect(screen.getByText('Building digital experiences that matter.')).toBeInTheDocument()
+    for(const [label,url] of [['GitHub',site.github],['LinkedIn',site.linkedin]]) {
+      const link=screen.getByRole('link',{name:new RegExp(label)})
+      expect(link).toHaveAttribute('href',url)
+      expect(link).toHaveAttribute('target','_blank')
+      expect(link).toHaveAttribute('rel','noopener noreferrer')
+    }
+    expect(screen.getByRole('link',{name:site.email})).toHaveAttribute('href',`mailto:${site.email}`)
+    expect(document.querySelector('a[href="#"]')).toBeNull()
+    expect(screen.queryByText(/twitter|careers|blog/i)).not.toBeInTheDocument()
+    expect(screen.getByText(new RegExp(`${new Date().getFullYear()} AKDEVIA`))).toBeInTheDocument()
   })
 })

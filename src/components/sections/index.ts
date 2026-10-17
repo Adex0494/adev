@@ -7,3 +7,5 @@ export { MedicaHighlightSection } from './MedicaHighlightSection'
 export { ProcessSection } from './ProcessSection'
 export { FinalCTASection } from './FinalCTASection'
 export { SiteFooter } from './SiteFooter'
+
+export { FounderSection } from './FounderSection'

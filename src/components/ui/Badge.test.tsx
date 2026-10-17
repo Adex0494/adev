@@ -27,7 +27,7 @@ describe('Badge', () => {
     render(<Badge variant="subtle" data-testid="badge">Subtle</Badge>)
     const el = screen.getByTestId('badge')
     expect(el).toHaveClass('bg-primary/10')
-    expect(el).toHaveClass('text-primary')
+    expect(el).toHaveClass('text-primary-text')
   })
 
   it('subtle variant does NOT use white text (contrast fix)', () => {
