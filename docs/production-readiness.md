@@ -181,8 +181,87 @@ settings can be cleared and AKDEVIA rebuilt to restore draft-only contact.
   approval block. `npm test`: **199 passed, 30 files**, no failures or skipped tests.
 - `npm run test:coverage`: **199 passed, 30 files**. V8 coverage for measured files:
   statements 87.15%, branches 80.24%, functions 93.06%, lines 89.45%.
+- Vitest uses at most four jsdom workers to avoid local/CI resource contention;
+  all cases and timeout limits remain intact. ESLint excludes generated coverage.
 - Only AKDEVIA suites were executed. No MEDIKA application tests or source files
   were changed or executed.
 - No credentials were added to source. Publication uses normal commits and pushes
   to `origin/master`, without force-pushing. The final deployment and its smoke
   checks are recorded after Vercel finishes building the release.
+
+## Production delivery record
+
+Application commit: `e0fb1ee534dc25faae2c7c5e1441b37cb1210195`.
+Initial commit: `840290613562e0ab90b887ccbbe51a0221f5bf55`.
+The release follow-up includes this delivery record and a native-form safeguard
+that uses POST to keep contact details out of URLs before JavaScript loads.
+A bilingual no-JavaScript notice directs visitors to email. Its final SHA is
+provided in the delivery response and is available through `git rev-parse HEAD`.
+
+Vercel confirmed the application release as **READY**, target **production**,
+project `akdevia`, deployment `dpl_9EFoxJkP1PWFsC6v5SVnVFapNVqT`:
+
+- Public URL: https://akdevia.vercel.app
+- Application release URL: https://akdevia-nm2vot98w-adex0494s-projects.vercel.app
+- GitHub Vercel commit status: success.
+- Remote build duration: approximately 36 seconds.
+
+The public deployment was checked in Chromium after publication:
+
+- Both languages, localized HTML language and SEO metadata, working images,
+  one H1 and no placeholder navigation.
+- Light/dark switching and persistence, mobile menu, project modal, validation,
+  Escape close and focus restoration.
+- Real contact API fallback and correctly addressed/encoded email draft; no
+  actual email was sent during these checks.
+- No horizontal overflow after responsive layout transitions at 320, 375, 768
+  and 1440 pixels. Original Geist fonts loaded successfully.
+- No axe violations in the tested light/dark, Spanish mobile and modal states.
+- No browser JavaScript page errors in the walkthrough.
+- Clicking the homepage demo link authenticated automatically at
+  `https://akdevia.vercel.app/medika/dashboard`; the browser stayed on AKDEVIA.
+- GitHub profile returned 200. LinkedIn redirected an anonymous browser to its
+  normal authentication wall, preserving the exact supplied profile destination.
+
+Observability limitation: the Vercel connector returned 403 for build-event logs
+and runtime-error logs. No authenticated Vercel CLI session was available as a
+fallback. READY state, GitHub deployment success and browser behavior were
+verified, but a clean server-log scan is **not claimed**. No drains or tracking
+services were installed. This limitation does not prevent the verified public
+site from operating; inspect the logs later through an authorized Vercel session.
+
+## Requested delivery checklist
+
+| # | Item | Result |
+| --- | --- | --- |
+| 1 | Initial commit | `840290613562e0ab90b887ccbbe51a0221f5bf55` |
+| 2 | Final commit | Application `e0fb1ee534dc25faae2c7c5e1441b37cb1210195`; release follow-up SHA in final response |
+| 3 | Sections changed | Header, hero, services, flagship work, case study/gallery, process, founder, contact, footer |
+| 4 | Placeholders removed | Three invented projects, fabricated statistics and MEDIKA claims, dead social/footer links, calendar mockup and inactive forms |
+| 5 | Homepage architecture | Positioning → capabilities → MEDIKA → case study → process → founder → enquiry |
+| 6 | MEDIKA architecture | One flagship product, business challenge/approach, engineering context, four-image gallery; demo document links to `/medika` |
+| 7 | Screenshots | `medika-patients.webp`, `medika-patient-history.webp`, `medika-consultation.webp`, `medika-reports.webp` |
+| 8 | Screenshot dataset | Sanitized public demo only; fictional records |
+| 9 | Contact implementation | Shared validated form, server-only Resend API, fixed recipient, reply-to, honeypot, limits, duplicate protection and draft fallback |
+| 10 | Automatic inbox delivery now | No; provider is unconfigured. Visitors send the prepared draft through their email app |
+| 11 | Email activation step | Authorized Resend account/key and sender; set `RESEND_API_KEY` and `CONTACT_FROM_EMAIL`, redeploy and verify receipt |
+| 12 | Scheduling implementation | Conditional safe HTTPS Calendly link; current contact form/email fallback |
+| 13 | Scheduling activation step | Authorize/configure a real event and set `NEXT_PUBLIC_CALENDLY_URL`, then redeploy |
+| 14 | LinkedIn | Supplied founder profile in founder/footer, accessible external links; anonymous access reaches LinkedIn authentication |
+| 15 | GitHub | Supplied public founder profile in founder/footer, accessible external links; returned 200 |
+| 16 | SEO | Future canonical domain, localized metadata, OG/Twitter, original icons/logo, Organization JSON-LD, robots, sitemap and hreflang |
+| 17 | EN/ES | Full content, forms, validation, accessibility labels and server-rendered locale metadata |
+| 18 | Accessibility | Landmarks, headings, focus visibility, skip link, modal focus/inert background, labels/errors, contrast and reduced motion |
+| 19 | Responsive/visual | 320/375/768/1440 px, desktop/mobile, both themes, restrained motion, responsive optimized images |
+| 20 | Analytics | No additional tracking or analytics services activated |
+| 21 | Dependencies | Next 16.4.2, React/React DOM 19.2.5, matching Next ESLint config and compatible security refresh; Framer Motion removed |
+| 22 | Tests | 199 passed in 30 files; coverage statements 87.15%, branches 80.24%, functions 93.06%, lines 89.45% |
+| 23 | Lint/typecheck | Both passed |
+| 24 | Production build | Passed locally; Vercel application release READY |
+| 25 | Deployment URLs | Public and application release URLs listed above; final release deployment in final response |
+| 26 | Deployment status | Application release READY, GitHub Vercel status success; logs inaccessible via current connector |
+| 27 | `/medika` smoke check | Passed automatic login on AKDEVIA public domain |
+| 28 | Production medical data | Never accessed, copied or modified |
+| 29 | Secrets | No secrets committed; source reviewed and scanned for common secret formats |
+| 30 | Domains | Namecheap, DNS and custom-domain attachment unchanged |
+| 31 | Domain launch steps | Review public site, optionally activate email/calendar, attach AKDEVIA domain and configure DNS manually, then verify HTTPS, metadata and demo authentication; submit sitemap |

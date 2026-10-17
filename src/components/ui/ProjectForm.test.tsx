@@ -15,6 +15,8 @@ describe('ProjectForm', () => {
   it('validates required fields without contacting the server', async () => {
     const fetch = vi.fn(); vi.stubGlobal('fetch', fetch)
     render(<ProjectForm />)
+    expect(screen.getByRole('form')).toHaveAttribute('method', 'post')
+    expect(screen.getByRole('form')).toHaveAttribute('action', '/api/contact')
     await userEvent.click(screen.getByRole('button', { name: /prepare email/i }))
     expect(await screen.findByText('Name is required.')).toBeInTheDocument()
     expect(screen.getByLabelText(/your name/i)).toHaveAttribute('aria-invalid', 'true')

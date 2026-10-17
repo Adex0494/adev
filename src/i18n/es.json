@@ -27,6 +27,7 @@
     "description": "Aplicaciones web a medida, sitios empresariales y productos digitales por Ariangel Díaz Espaillat. Conoce MEDIKA, una plataforma de gestión de consultas médicas."
   },
   "form": {
+    "noScript": "Activa JavaScript para usar el formulario o escríbeme directamente por correo:",
     "requiredHelper": "* Los campos marcados con asterisco son obligatorios.",
     "name": {
       "required": "El nombre es obligatorio.",

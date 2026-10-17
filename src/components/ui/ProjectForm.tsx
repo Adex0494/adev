@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { t, type Locale } from '@/i18n'
 import { projectIntakeSchema, type ProjectIntakeFormValues } from '@/lib/schemas/projectIntake'
 import { contactMailto } from '@/lib/contact'
+import { site } from '@/lib/site'
 import { Button } from './Button'
 
 export interface ProjectFormProps { locale?: Locale; emailConfigured?: boolean; className?: string }
@@ -37,7 +38,8 @@ export function ProjectForm({ locale = 'en', emailConfigured = false, className 
   }
 
   const fields = ['name', 'email', 'company', 'budget', 'description'] as const
-  return <form onSubmit={event => { void handleSubmit(submit)(event) }} onChange={() => { requestId.current = ''; setStatus('idle'); setDraft('') }} noValidate aria-label={label('title')} className={className}>
+  return <form method="post" action="/api/contact" onSubmit={event => { void handleSubmit(submit)(event) }} onChange={() => { requestId.current = ''; setStatus('idle'); setDraft('') }} noValidate aria-label={label('title')} className={className}>
+    <noscript><p className="mb-4 text-sm">{text('form.noScript')} <a href={`mailto:${site.email}`} className="underline">{site.email}</a></p></noscript>
     <p className="mb-4 text-xs text-muted">{text('form.requiredHelper')}</p>
     {!emailConfigured && <p className="mb-5 rounded-lg border border-border bg-background-secondary p-3 text-sm leading-relaxed text-muted">{text('form.unconfigured')}</p>}
     <div className="grid gap-5 sm:grid-cols-2">

@@ -10,6 +10,8 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
+    // Bound jsdom workers to avoid resource contention during local/CI checks.
+    maxWorkers: 4,
     setupFiles: ['./vitest.setup.ts'],
     css: true,
   },
