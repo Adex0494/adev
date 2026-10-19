@@ -36,3 +36,5 @@ export type { LogoFullProps } from './LogoFull'
 
 export { ProjectForm } from './ProjectForm'
 export type { ProjectFormProps } from './ProjectForm'
+export { LanguageToggle } from './LanguageToggle'
+export { SocialLinks, SocialIcon } from './SocialLinks'

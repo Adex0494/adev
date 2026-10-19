@@ -1,5 +1,8 @@
 # AKDEVIA production handoff
 
+Historical initial release record. For the current live custom domain, About
+section and language-switch architecture, see [Production polish](production-polish.md).
+
 ## Scope and audit
 
 Baseline: `8402906` on `master`, clean working tree, repository `Adex0494/adev`.
@@ -91,9 +94,10 @@ There is no third-party embed or scheduling dependency.
 
 ## Languages, SEO and accessibility
 
-English is `/`; Spanish is `/?lang=es`. Both render on the server, including
-`html[lang]`, metadata, content, forms, errors and accessible labels. Language links
-use full document navigation. Browser URLs preserve the language on reload.
+Explicit language URLs are `/?lang=en` and `/?lang=es`. Both render on the server,
+including `html[lang]`, metadata, content, forms, errors and accessible labels.
+The current locale provider switches immediately using native history and a
+manual-preference cookie; browser back/forward restores the URL's language.
 Canonical URLs and reciprocal hreflang point to the intended `https://akdevia.com`.
 Metadata includes localized titles/descriptions, Open Graph, Twitter large-image
 cards, the unchanged official logo, existing favicons, Organization JSON-LD,

@@ -3,13 +3,15 @@
 import { useTheme } from './ThemeProvider'
 import { cn } from '@/lib/utils'
 import { t, type Locale } from '@/i18n'
+import { useLocale } from '@/i18n/LocaleProvider'
 
 export interface ThemeToggleProps {
   locale?: Locale
   className?: string
 }
 
-export function ThemeToggle({ className, locale = 'en' }: ThemeToggleProps) {
+export function ThemeToggle({ className, locale: override }: ThemeToggleProps) {
+  const { locale } = useLocale(override)
   const { resolvedTheme, setTheme } = useTheme()
   const isDark = resolvedTheme === 'dark'
 
@@ -18,7 +20,7 @@ export function ThemeToggle({ className, locale = 'en' }: ThemeToggleProps) {
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       aria-label={isDark ? t('common.lightMode', locale) : t('common.darkMode', locale)}
       className={cn(
-        'inline-flex h-10 w-10 items-center justify-center rounded-md border border-border',
+        'inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-border',
         'text-foreground hover:bg-card transition-colors',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         className,

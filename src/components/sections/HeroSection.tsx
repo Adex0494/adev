@@ -2,11 +2,13 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { t, type Locale } from '@/i18n'
+import { useLocale } from '@/i18n/LocaleProvider'
 import { Badge, Button, Container, Heading, Lead } from '@/components/ui'
 import { ProjectIntakeModal } from '@/components/ui/Modal'
 
 export interface HeroSectionProps { locale?: Locale; emailConfigured?: boolean }
-export function HeroSection({ locale = 'en', emailConfigured = false }: HeroSectionProps) {
+export function HeroSection({ locale: override, emailConfigured = false }: HeroSectionProps) {
+  const { locale } = useLocale(override)
   const [open, setOpen] = useState(false)
   const text = (key: string) => t(key, locale)
   return <>
@@ -17,6 +19,7 @@ export function HeroSection({ locale = 'en', emailConfigured = false }: HeroSect
           <div>
             <Badge variant="subtle" className="mb-6">{text('home.hero.tagline')}</Badge>
             <Heading as="h1" id="hero-title" className="mb-6 max-w-xl leading-[1.08]">{text('home.hero.title')}</Heading>
+            <p className="mb-6 max-w-lg border-l-2 border-primary/40 pl-4 text-xl font-medium leading-snug text-primary-text sm:text-2xl">{text('home.hero.brandPhrase')}</p>
             <Lead className="mb-8 max-w-xl">{text('home.hero.subtitle')}</Lead>
             <div className="flex flex-wrap gap-3">
               <Button size="lg" onClick={() => setOpen(true)}>{text('home.hero.ctaPrimary')}</Button>

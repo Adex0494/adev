@@ -1,27 +1,40 @@
+'use client'
+
+import Image from 'next/image'
 import { t, type Locale } from '@/i18n'
+import { useLocale } from '@/i18n/LocaleProvider'
 import { Badge, Container, Heading } from '@/components/ui'
+import { SocialLinks } from '@/components/ui/SocialLinks'
 import { site } from '@/lib/site'
 
 export interface FounderSectionProps { locale?: Locale }
 
-export function FounderSection({ locale = 'en' }: FounderSectionProps) {
+export function FounderSection({ locale: override }: FounderSectionProps) {
+  const { locale } = useLocale(override)
   const text = (key: string) => t(key, locale)
   return <section id="about" aria-labelledby="founder-title" className="bg-background py-20 lg:py-24">
     <Container size="xl">
-      <div className="grid gap-10 border-t border-border pt-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
-        <div>
+      <div className="border-t border-border pt-12">
+        <div className="mb-10 text-center">
           <Badge variant="subtle" className="mb-4">{text('home.founder.badge')}</Badge>
-          <Heading as="h2" id="founder-title" className="mb-6">{text('home.founder.heading')}</Heading>
-          <p className="mb-1 text-lg font-semibold">{site.founder}</p>
-          <p className="text-sm text-primary-text">{text('home.founder.role')}</p>
+          <Heading as="h2" id="founder-title">{text('home.founder.heading')}</Heading>
         </div>
-        <div className="space-y-5 leading-relaxed text-muted">
-          <p>{text('home.founder.description')}</p><p>{text('home.founder.approach')}</p>
-          <h3 className="pt-2 font-semibold text-foreground">{text('home.founder.technical')}</h3>
-          <p className="text-sm">{text('home.founder.technicalBody')}</p>
-          <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-primary-text">
-            <a href={site.github} target="_blank" rel="noopener noreferrer" aria-label={text('common.github')}>{text('home.founder.github')} <span aria-hidden="true">↗</span></a>
-            <a href={site.linkedin} target="_blank" rel="noopener noreferrer" aria-label={text('common.linkedin')}>{text('home.founder.linkedin')} <span aria-hidden="true">↗</span></a>
+        <div className="mx-auto grid max-w-4xl items-center gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+          <div className="min-w-0 text-center">
+            <div className="mx-auto mb-5 max-w-60 rounded-[2rem] border border-primary/20 bg-gradient-to-br from-primary/10 to-accent/5 p-2 md:max-w-72">
+              <Image src={site.portrait.src} width={site.portrait.width} height={site.portrait.height} sizes="(min-width: 768px) 272px, 224px" alt={text('home.founder.imageAlt')} className="aspect-square h-auto w-full rounded-[1.5rem] object-contain" />
+            </div>
+            <h3 className="mb-1 text-xl font-semibold tracking-tight">{site.founder}</h3>
+            <p className="mb-5 text-sm text-primary-text">{text('home.founder.role')}</p>
+            <SocialLinks locale={locale} className="justify-center" />
+          </div>
+          <div className="min-w-0 space-y-5 text-base leading-relaxed text-muted">
+            <p>{text('home.founder.description')}</p>
+            <p>{text('home.founder.approach')}</p>
+            <div className="border-t border-border pt-5">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-foreground-secondary">{text('home.founder.technical')}</p>
+              <p className="font-mono text-sm leading-relaxed text-primary-text">{text('home.founder.technologies')}</p>
+            </div>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useId, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { t, type Locale } from '@/i18n'
+import { useLocale } from '@/i18n/LocaleProvider'
 import { projectIntakeSchema, type ProjectIntakeFormValues } from '@/lib/schemas/projectIntake'
 import { contactMailto } from '@/lib/contact'
 import { site } from '@/lib/site'
@@ -11,7 +12,8 @@ import { Button } from './Button'
 
 export interface ProjectFormProps { locale?: Locale; emailConfigured?: boolean; className?: string }
 
-export function ProjectForm({ locale = 'en', emailConfigured = false, className }: ProjectFormProps) {
+export function ProjectForm({ locale: override, emailConfigured = false, className }: ProjectFormProps) {
+  const { locale } = useLocale(override)
   const id = useId()
   const lock = useRef(false)
   const requestId = useRef('')

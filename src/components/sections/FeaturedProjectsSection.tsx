@@ -1,9 +1,14 @@
+'use client'
+
+import { useLocale } from '@/i18n/LocaleProvider'
+
 import Image from 'next/image'
 import { t, type Locale } from '@/i18n'
 import { Badge, Container, Heading, Lead } from '@/components/ui'
 import { site } from '@/lib/site'
 export interface FeaturedProjectsSectionProps { locale?: Locale }
-export function FeaturedProjectsSection({ locale = 'en' }: FeaturedProjectsSectionProps) {
+export function FeaturedProjectsSection({ locale: override }: FeaturedProjectsSectionProps) {
+  const { locale } = useLocale(override)
   const text = (key: string) => t(key, locale)
   return <section id="work" aria-labelledby="work-title" className="bg-background py-20 lg:py-24">
     <Container size="xl">

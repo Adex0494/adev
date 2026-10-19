@@ -8,6 +8,7 @@ describe('SiteHeader', () => {
     setup()
     expect(screen.getByRole('img',{name:'ADEV'})).toHaveAttribute('src','/logo/logo.png')
     expect(screen.getByRole('navigation',{name:'Main navigation'}).querySelectorAll('a')).toHaveLength(4)
+    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute('href', '#about')
     expect(screen.getByRole('link',{name:'Cambiar a español'})).toHaveAttribute('href','/?lang=es')
     expect(screen.getByRole('link',{name:'Skip to content'})).toHaveAttribute('href','#main-content')
   })

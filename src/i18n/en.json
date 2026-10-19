@@ -10,7 +10,8 @@
     "language": "Cambiar a español",
     "github": "GitHub profile of Ariangel Díaz Espaillat (opens in a new tab)",
     "linkedin": "LinkedIn profile of Ariangel Díaz Espaillat (opens in a new tab)",
-    "email": "Email Ariangel",
+    "email": "Email AKDEVIA",
+    "website": "AKDEVIA website (opens in a new tab)",
     "demo": "Interactive demo · Fictional data",
     "enlarge": "Open full-size screenshot (opens in a new tab)"
   },
@@ -19,15 +20,15 @@
     "services": "Services",
     "work": "Work",
     "process": "Process",
-    "about": "Founder",
+    "about": "About",
     "contact": "Contact"
   },
   "seo": {
     "title": "AKDEVIA — Custom Software, Web & App Development",
-    "description": "Custom web applications, business websites and digital products by Ariangel Díaz Espaillat. Explore MEDIKA, a medical practice management platform."
+    "description": "AKDEVIA builds custom software, web applications and digital products for real business needs. Explore MEDIKA and meet founder Ariangel Díaz Espaillat."
   },
   "form": {
-    "noScript": "Enable JavaScript to use the form, or contact me directly by email:",
+    "noScript": "Enable JavaScript to use the form, or contact us directly by email:",
     "requiredHelper": "* Fields marked with an asterisk are required.",
     "name": {
       "required": "Name is required.",
@@ -56,7 +57,7 @@
   "modal": {
     "projectIntake": {
       "title": "Start a project",
-      "subtitle": "Tell me what you want to build, who it is for and what you need it to do.",
+      "subtitle": "Tell us what you want to build, who it is for and what you need it to do.",
       "name": "Your name",
       "namePlaceholder": "Your full name",
       "email": "Email address",
@@ -78,7 +79,7 @@
     },
     "contact": {
       "title": "Get in touch",
-      "subtitle": "Tell me about your project."
+      "subtitle": "Tell us about your project."
     }
   },
   "home": {
@@ -89,10 +90,11 @@
       "tagline": "Software & product development",
       "badge": "Independent thinking. Thoughtful engineering.",
       "title": "Software built around your business.",
-      "subtitle": "AKDEVIA turns your ideas and everyday challenges into web applications, websites and digital products that are clear, useful and built to evolve.",
+      "brandPhrase": "Not just ideas... Results you can experience",
+      "subtitle": "We build web applications, websites and digital products that solve real business problems.",
       "ctaPrimary": "Start a project",
       "ctaSecondary": "View our work",
-      "note": "Work directly with the developer who builds your product.",
+      "note": "Built to launch. Designed to evolve.",
       "preview": "A real product, from idea to working software",
       "previewLink": "Explore MEDIKA",
       "capabilities": "Web applications · Websites · Mobile products"
@@ -121,7 +123,7 @@
       "heading": "Meet MEDIKA.",
       "subheading": "Medical practice management, brought into one workspace.",
       "explore": "Explore the case study",
-      "summary": "A working software product that connects patient records, consultations, prescriptions and the everyday administration of a medical practice.",
+      "summary": "Our flagship product connects patient records, consultations, prescriptions and everyday practice administration. Open the live demo and experience the software for yourself.",
       "type": "Medical Practice Management Platform",
       "role": "Product development · UI engineering · Workflow design",
       "stack": "Next.js · TypeScript · Supabase",
@@ -195,15 +197,14 @@
       }
     },
     "founder": {
-      "badge": "The person behind AKDEVIA",
-      "heading": "Direct collaboration. Careful engineering.",
-      "role": "Software Developer / Founder",
-      "description": "I’m Ariangel Díaz Espaillat. I build software through AKDEVIA, with a focus on practical workflows, clear interfaces and maintainable code.",
-      "approach": "You work directly with me from the first conversation through implementation. MEDIKA is a working example of that approach.",
-      "technical": "For engineering teams",
-      "technicalBody": "Explore the live product and my public code to see how I approach interfaces, application structure and business workflows.",
-      "github": "Explore my GitHub",
-      "linkedin": "Connect on LinkedIn"
+      "badge": "Who we are",
+      "heading": "About AKDEVIA",
+      "role": "Founder & Software Developer",
+      "imageAlt": "Ariangel Díaz Espaillat, founder of AKDEVIA",
+      "description": "AKDEVIA builds modern web applications, business websites and digital products that solve real business problems. Founded by Ariangel Díaz Espaillat, the company connects product thinking with hands-on software development.",
+      "approach": "Our work combines modern web development with clear interfaces and maintainable implementation. We collaborate with clients and professional teams to turn priorities into software people can open, test and use.",
+      "technical": "Our core technologies",
+      "technologies": "React · TypeScript · Next.js · Supabase"
     },
     "cta": {
       "badge": "Let’s talk",
@@ -212,10 +213,10 @@
       "bookCall": "Book a call",
       "bookCallSubtitle": "Choose a time for an introductory conversation.",
       "directTitle": "Start a conversation",
-      "directBody": "Tell me about your idea, your business or a role you are hiring for. We can discuss a practical next step.",
+      "directBody": "Tell us about your product, your business goals or a professional collaboration. We can define a practical next step together.",
       "sendMessage": "Project enquiry",
       "email": "Write an email",
-      "response": "Your enquiry goes directly to Ariangel."
+      "response": "A direct conversation with AKDEVIA about what comes next."
     },
     "footer": {
       "tagline": "Thoughtful software for real business needs.",

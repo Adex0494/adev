@@ -4,6 +4,13 @@ import { HeroSection } from './HeroSection'
 import { t } from '@/i18n'
 
 describe('HeroSection', () => {
+  it.each([
+    ['en', 'Not just ideas... Results you can experience'],
+    ['es', 'No solo ideas... Resultados que puedes experimentar.'],
+  ] as const)('uses the exact brand phrase once in %s', (locale, phrase) => {
+    render(<HeroSection locale={locale} />)
+    expect(screen.getAllByText(phrase)).toHaveLength(1)
+  })
   it('explains the business and links to real work', () => {
     render(<HeroSection />)
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(t('home.hero.title'))

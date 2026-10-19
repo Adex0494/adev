@@ -5,6 +5,7 @@ import { ADEV_LOGO } from '@/lib/brand'
 import { site } from '@/lib/site'
 import { getLocale } from '@/i18n/server'
 import { t } from '@/i18n'
+import { LocaleProvider } from '@/i18n/LocaleProvider'
 import './globals.css'
 
 const geistSans = Geist({
@@ -65,7 +66,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <LocaleProvider initialLocale={locale}><ThemeProvider>{children}</ThemeProvider></LocaleProvider>
       </body>
     </html>
   )

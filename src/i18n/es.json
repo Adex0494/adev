@@ -10,7 +10,8 @@
     "language": "Switch to English",
     "github": "Perfil de GitHub de Ariangel Díaz Espaillat (abre en otra pestaña)",
     "linkedin": "Perfil de LinkedIn de Ariangel Díaz Espaillat (abre en otra pestaña)",
-    "email": "Escribir a Ariangel",
+    "email": "Escribir a AKDEVIA",
+    "website": "Sitio web de AKDEVIA (abre en otra pestaña)",
     "demo": "Demo interactivo · Datos ficticios",
     "enlarge": "Abrir captura completa (abre en otra pestaña)"
   },
@@ -19,15 +20,15 @@
     "services": "Servicios",
     "work": "Proyectos",
     "process": "Proceso",
-    "about": "Fundador",
+    "about": "Nosotros",
     "contact": "Contacto"
   },
   "seo": {
     "title": "AKDEVIA — Desarrollo de Software, Web y Aplicaciones",
-    "description": "Aplicaciones web a medida, sitios empresariales y productos digitales por Ariangel Díaz Espaillat. Conoce MEDIKA, una plataforma de gestión de consultas médicas."
+    "description": "AKDEVIA desarrolla software a medida, aplicaciones web y productos digitales para necesidades reales de negocio. Conoce MEDIKA y al fundador Ariangel Díaz Espaillat."
   },
   "form": {
-    "noScript": "Activa JavaScript para usar el formulario o escríbeme directamente por correo:",
+    "noScript": "Activa JavaScript para usar el formulario o escríbenos directamente por correo:",
     "requiredHelper": "* Los campos marcados con asterisco son obligatorios.",
     "name": {
       "required": "El nombre es obligatorio.",
@@ -56,7 +57,7 @@
   "modal": {
     "projectIntake": {
       "title": "Iniciar un proyecto",
-      "subtitle": "Cuéntame qué quieres crear, para quién y qué necesitas resolver.",
+      "subtitle": "Cuéntanos qué quieres crear, para quién y qué necesitas resolver.",
       "name": "Tu nombre",
       "namePlaceholder": "Tu nombre completo",
       "email": "Correo electrónico",
@@ -78,7 +79,7 @@
     },
     "contact": {
       "title": "Hablemos",
-      "subtitle": "Cuéntame sobre tu proyecto."
+      "subtitle": "Cuéntanos sobre tu proyecto."
     }
   },
   "home": {
@@ -89,10 +90,11 @@
       "tagline": "Desarrollo de software y productos",
       "badge": "Criterio propio. Ingeniería con propósito.",
       "title": "Software a la medida de tu negocio.",
-      "subtitle": "AKDEVIA convierte tus ideas y retos diarios en aplicaciones web, sitios y productos digitales claros, útiles y preparados para evolucionar.",
+      "brandPhrase": "No solo ideas... Resultados que puedes experimentar.",
+      "subtitle": "Construimos aplicaciones web, sitios y productos digitales que resuelven problemas reales de negocio.",
       "ctaPrimary": "Iniciar un proyecto",
       "ctaSecondary": "Ver nuestro trabajo",
-      "note": "Trabaja directamente con quien desarrolla tu producto.",
+      "note": "Listos para lanzar. Preparados para evolucionar.",
       "preview": "Un producto real, de la idea al software",
       "previewLink": "Explorar MEDIKA",
       "capabilities": "Aplicaciones web · Sitios web · Productos móviles"
@@ -121,7 +123,7 @@
       "heading": "Conoce MEDIKA.",
       "subheading": "La gestión de consultas médicas en un solo espacio.",
       "explore": "Explorar el caso de estudio",
-      "summary": "Un producto de software funcional que conecta expedientes de pacientes, consultas, recetas y la administración diaria de un consultorio.",
+      "summary": "Nuestro producto destacado conecta expedientes, consultas, recetas y la administración diaria del consultorio. Abre el demo en vivo y experimenta el software por ti mismo.",
       "type": "Plataforma de gestión de consultas médicas",
       "role": "Desarrollo de producto · Ingeniería de interfaces · Diseño de procesos",
       "stack": "Next.js · TypeScript · Supabase",
@@ -195,15 +197,14 @@
       }
     },
     "founder": {
-      "badge": "La persona detrás de AKDEVIA",
-      "heading": "Colaboración directa. Ingeniería cuidadosa.",
-      "role": "Desarrollador de software / Fundador",
-      "description": "Soy Ariangel Díaz Espaillat. Desarrollo software a través de AKDEVIA, con atención a los procesos reales, las interfaces claras y el código mantenible.",
-      "approach": "Trabajas directamente conmigo desde la primera conversación hasta la implementación. MEDIKA es un ejemplo funcional de ese enfoque.",
-      "technical": "Para equipos de ingeniería",
-      "technicalBody": "Explora el producto en vivo y mi código público para conocer cómo abordo las interfaces, la estructura de las aplicaciones y los procesos de negocio.",
-      "github": "Explorar mi GitHub",
-      "linkedin": "Conectar en LinkedIn"
+      "badge": "Quiénes somos",
+      "heading": "Sobre AKDEVIA",
+      "role": "Fundador y desarrollador de software",
+      "imageAlt": "Ariangel Díaz Espaillat, fundador de AKDEVIA",
+      "description": "AKDEVIA desarrolla aplicaciones web modernas, sitios empresariales y productos digitales que resuelven problemas reales de negocio. Fundada por Ariangel Díaz Espaillat, la empresa une la visión de producto con la implementación de software.",
+      "approach": "Nuestro trabajo combina desarrollo web moderno, interfaces claras y código mantenible. Colaboramos con clientes y equipos profesionales para convertir prioridades en software que las personas pueden abrir, probar y usar.",
+      "technical": "Nuestras tecnologías principales",
+      "technologies": "React · TypeScript · Next.js · Supabase"
     },
     "cta": {
       "badge": "Hablemos",
@@ -212,10 +213,10 @@
       "bookCall": "Agendar una llamada",
       "bookCallSubtitle": "Elige un horario para una conversación inicial.",
       "directTitle": "Iniciemos una conversación",
-      "directBody": "Cuéntame sobre tu idea, tu negocio o una vacante que buscas cubrir. Podemos definir un próximo paso concreto.",
+      "directBody": "Cuéntanos sobre tu producto, los objetivos de tu negocio o una colaboración profesional. Podemos definir juntos un próximo paso concreto.",
       "sendMessage": "Consulta de proyecto",
       "email": "Escribir un correo",
-      "response": "Tu consulta llega directamente a Ariangel."
+      "response": "Una conversación directa con AKDEVIA para definir el próximo paso."
     },
     "footer": {
       "tagline": "Software con propósito para necesidades reales.",

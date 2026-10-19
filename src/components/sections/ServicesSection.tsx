@@ -1,3 +1,7 @@
+'use client'
+
+import { useLocale } from '@/i18n/LocaleProvider'
+
 import { t as translate, type Locale } from '@/i18n'
 import { Badge, CardTitle, CardDescription, Container, Heading, Lead } from '@/components/ui'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
@@ -59,7 +63,8 @@ const serviceIcons: Record<(typeof homeServices)[number], React.ReactNode> = {
 }
 
 export interface ServicesSectionProps { locale?: Locale }
-export function ServicesSection({ locale = 'en' }: ServicesSectionProps) {
+export function ServicesSection({ locale: override }: ServicesSectionProps) {
+  const { locale } = useLocale(override)
   const t = (key: string) => translate(key, locale)
   return (
     <section id="services" className="bg-background-secondary py-24">

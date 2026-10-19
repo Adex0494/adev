@@ -6,19 +6,20 @@ The repositories remain independent; there is no shared build or dependency.
 | Vercel project | GitHub repository | Production branch | Public routes |
 | --- | --- | --- | --- |
 | akdevia | https://github.com/Adex0494/adev | master | `/` and everything except `/medika` |
-| medika-demo | https://github.com/Adex0494/Clinika | medika-demo | `/medika` and `/medika/*` |
+| clinika (real MEDIKA production) | https://github.com/Adex0494/Clinika | main | Root application on its independent domain |
+| medika-demo | https://github.com/Adex0494/Clinika | main | `/medika` and `/medika/*` |
 
-MEDIKA's existing `main` branch participates in the real production release
-workflow. This integration is committed to `medika-demo` instead. Select that
-branch manually as the demo project's Production Branch. Do not merge/push
-these changes to `main` as part of the portfolio deployment. Future demo
-updates deploy only medika-demo; AKDEVIA commits deploy only akdevia. Bring
-future reviewed application changes into the demo branch separately.
+Verified on 2026-10-19: both MEDIKA projects already deploy `main`, with separate
+environment settings. Both latest production deployments are READY at commit
+`d187aab7cd69c7658924f28d86ef62f9be8e6e72`. The earlier `medika-demo` Git branch
+instructions below were superseded by this shared-code, isolated-environment setup.
+AKDEVIA commits deploy only AKDEVIA. MEDIKA commits deploy its two projects.
+No cross-deployment hook or shared build is needed.
 
 ## Manual Vercel configuration
 
 1. Import Clinika as **medika-demo**, repository root, Next.js preset, Production
-   Branch `medika-demo`, install `pnpm install --frozen-lockfile`, build `pnpm build`.
+   Branch `main`, install `pnpm install --frozen-lockfile`, build `pnpm build`.
    Configure the variables in MEDIKA's `docs/multi-zone-deployment.md` before
    building. Do not alter its existing production project or Supabase resources.
 2. Use the stable Production domain assigned by Vercel to medika-demo. It must
@@ -30,8 +31,8 @@ future reviewed application changes into the demo branch separately.
 4. Add **SERVER-ONLY** `MEDIKA_DEMO_ORIGIN=https://<stable-medika-demo-production-domain>`
    to akdevia. It is an origin, without `/medika`, query strings or credentials.
    Trailing slash is normalized. No `NEXT_PUBLIC_MEDIKA_DEMO_ORIGIN` is needed.
-5. Only akdevia owns `akdevia.com` (and optionally `www.akdevia.com`). Attach
-   domains and configure Namecheap DNS manually. No Vercel/DNS changes are
+5. Only akdevia owns `akdevia.com`; `www.akdevia.com` redirects to the apex with
+   HTTP 308. Both assignments are already verified. No domain or DNS changes are
    automated by this repository.
 
 The origin is read by next.config.ts at build time. Rebuild ADEV after changing

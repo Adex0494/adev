@@ -1,3 +1,7 @@
+'use client'
+
+import { useLocale } from '@/i18n/LocaleProvider'
+
 import { t as translate, type Locale } from '@/i18n'
 import { Badge, Container, Heading, Lead } from '@/components/ui'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
@@ -5,7 +9,8 @@ import { homeProcessSteps } from '@/content/home'
 import { cn } from '@/lib/utils'
 
 export interface ProcessSectionProps { locale?: Locale }
-export function ProcessSection({ locale = 'en' }: ProcessSectionProps) {
+export function ProcessSection({ locale: override }: ProcessSectionProps) {
+  const { locale } = useLocale(override)
   const t = (key: string) => translate(key, locale)
   return (
     <section id="process" className="bg-background py-24">

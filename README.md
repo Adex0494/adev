@@ -16,9 +16,11 @@ npm run test:coverage
 npm run build
 ```
 
-Open http://localhost:3000 for English or http://localhost:3000/?lang=es for
-Spanish. Keep both translation files in `src/i18n/` aligned. Server-rendered
-sections receive the selected locale; only interactive controls use client code.
+Open http://localhost:3000 for automatic language selection, or use `?lang=en`
+and `?lang=es` for explicit, shareable language URLs. A saved manual choice takes
+priority over the browser language. Keep both translation files in `src/i18n/`
+aligned. Content and metadata render on the server; the locale context switches
+the existing content immediately without document navigation or a hydration flash.
 
 Copy `.env.example` to ignored `.env.local` when configuring integrations.
 No email provider or calendar account is required: the contact form offers a
@@ -28,14 +30,17 @@ truthful prefilled email draft until server-side mail delivery is configured.
 
 - [Production handoff](docs/production-readiness.md): contact setup, scheduling,
   screenshot provenance, SEO, accessibility and domain-launch checklist.
+- [Production polish](docs/production-polish.md): founder portrait, About, brand
+  phrase, instant language switching and current deployment audit.
 - [Independent MEDIKA zone](docs/multi-zone-deployment.md): external rewrites and
   demo-only environment boundaries. Public demo links always use `/medika`.
-- `src/lib/site.ts`: real business/contact/profile URLs and future canonical domain.
+- `src/lib/site.ts`: real business/contact/profile URLs, portrait and canonical domain.
 - `src/lib/brand.ts`: centralized official logo asset and dimensions.
 
 GitHub: https://github.com/Adex0494/adev · Production branch: `master`.
-Vercel project: **AKDEVIA** · Current public site: https://akdevia.vercel.app.
-Future canonical domain: https://akdevia.com. DNS and domain attachment are manual.
+Vercel project: **AKDEVIA** · Production: https://akdevia.com.
+Fallback: https://akdevia.vercel.app. The verified `www` domain redirects to the
+apex domain. This repository does not manage DNS.
 
 ## Official logo
 

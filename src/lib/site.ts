@@ -6,6 +6,7 @@ export const site = {
   github: 'https://github.com/Adex0494/',
   linkedin: 'https://www.linkedin.com/in/ariangel-diaz-espaillat/',
   medika: '/medika',
+  portrait: { src: '/about/ariangel-diaz-espaillat.webp', width: 360, height: 360 },
 } as const
 
 export function schedulingUrl(value = process.env.NEXT_PUBLIC_CALENDLY_URL): string | undefined {

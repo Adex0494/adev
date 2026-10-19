@@ -1,3 +1,7 @@
+'use client'
+
+import { useLocale } from '@/i18n/LocaleProvider'
+
 import Image from 'next/image'
 import { t, type Locale } from '@/i18n'
 import { Badge, Container, Heading, Lead } from '@/components/ui'
@@ -9,7 +13,8 @@ const screenshots = [
   { key: 'consultation', file: 'medika-consultation' },
   { key: 'reports', file: 'medika-reports' },
 ] as const
-export function MedicaHighlightSection({ locale = 'en' }: MedicaHighlightSectionProps) {
+export function MedicaHighlightSection({ locale: override }: MedicaHighlightSectionProps) {
+  const { locale } = useLocale(override)
   const text = (key: string) => t(key, locale)
   return <section id="medika-case-study" aria-labelledby="case-title" className="bg-background-secondary py-20 lg:py-24">
     <Container size="xl">
