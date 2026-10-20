@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import Image from 'next/image'
 import { t, type Locale } from '@/i18n'
 import { useLocale } from '@/i18n/LocaleProvider'
 import { Badge, Button, Container, Heading, Lead } from '@/components/ui'
@@ -28,15 +27,13 @@ export function HeroSection({ locale: override, emailConfigured = false }: HeroS
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-muted">{text('home.hero.note')}</p>
           </div>
           <div className="relative min-w-0">
-            <a href="#work" className="group block overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-primary/5">
-              <div className="flex items-center justify-between gap-3 border-b border-border-subtle px-5 py-4">
-                <span className="font-semibold tracking-wide">MEDIKA</span><span className="text-xs text-muted">{text('common.demo')}</span>
-              </div>
-              <div className="overflow-hidden bg-background-secondary p-3 sm:p-5">
-                <Image src="/projects/medika/medika-patients.webp" width={1440} height={900} sizes="(min-width: 1280px) 550px, (min-width: 1024px) 45vw, 92vw" alt={text('home.projects.imageAlt')} priority className="h-auto w-full rounded-lg border border-border-subtle transition-transform duration-300 group-hover:scale-[1.015]" />
-              </div>
-              <div className="px-5 py-4"><p className="mb-2 text-sm text-muted">{text('home.hero.preview')}</p><span className="text-sm font-medium text-primary-text">{text('home.hero.previewLink')} <span aria-hidden="true">→</span></span></div>
-            </a>
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-xl shadow-primary/5 sm:p-10">
+              <p className="mb-8 text-xs font-semibold uppercase tracking-widest text-primary-text">{text('home.hero.focus')}</p>
+              <div className="space-y-7">{['purpose', 'workflow', 'experience'].map((key, index) => <div key={key} className="flex gap-4">
+                <span aria-hidden="true" className="pt-1 font-mono text-xs text-primary-text">0{index + 1}</span>
+                <div><h2 className="mb-2 text-xl font-semibold tracking-tight">{text(`home.hero.${key}.title`)}</h2><p className="text-sm leading-relaxed text-muted">{text(`home.hero.${key}.description`)}</p></div>
+              </div>)}</div>
+            </div>
             <p className="mt-5 text-center text-xs tracking-wide text-muted">{text('home.hero.capabilities')}</p>
           </div>
         </div>

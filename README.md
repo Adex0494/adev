@@ -32,6 +32,8 @@ truthful prefilled email draft until server-side mail delivery is configured.
   screenshot provenance, SEO, accessibility and domain-launch checklist.
 - [Production polish](docs/production-polish.md): founder portrait, About, brand
   phrase, instant language switching and current deployment audit.
+- [Products and navigation](docs/products-and-navigation.md): company/product
+  boundaries, localized routes, scroll spy and validation for the MEDIKA product page.
 - [Independent MEDIKA zone](docs/multi-zone-deployment.md): external rewrites and
   demo-only environment boundaries. Public demo links always use `/medika`.
 - `src/lib/site.ts`: real business/contact/profile URLs, portrait and canonical domain.

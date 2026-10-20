@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { LOCALE_COOKIE, resolveLocale } from '@/i18n/preferences'
 
-// Only the marketing homepage is localized here. Never intercept the MEDIKA zone.
+// Localize marketing pages only. Never intercept the independent MEDIKA zone.
 export function proxy(request: NextRequest) {
   const headers = new Headers(request.headers)
   const locale = resolveLocale({
@@ -13,4 +13,4 @@ export function proxy(request: NextRequest) {
   return NextResponse.next({ request: { headers } })
 }
 
-export const config = { matcher: ['/'] }
+export const config = { matcher: ['/', '/products/:path*'] }

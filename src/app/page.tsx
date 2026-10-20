@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { SiteHeader, HeroSection, ServicesSection, FeaturedProjectsSection, MedicaHighlightSection, ProcessSection, FounderSection, FinalCTASection, SiteFooter } from '@/components/sections'
+import { SiteHeader, HeroSection, ServicesSection, FeaturedProjectsSection, ProcessSection, FounderSection, FinalCTASection, SiteFooter } from '@/components/sections'
 import { getLocale } from '@/i18n/server'
 import { t } from '@/i18n'
 import { site } from '@/lib/site'
@@ -28,9 +28,8 @@ export default async function Home() {
       <HeroSection emailConfigured={emailConfigured} />
       <ServicesSection />
       <FeaturedProjectsSection />
-      <MedicaHighlightSection />
-      <ProcessSection />
       <FounderSection />
+      <ProcessSection />
       <FinalCTASection emailConfigured={emailConfigured} />
     </main>
     <SiteFooter />

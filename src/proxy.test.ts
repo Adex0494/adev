@@ -5,7 +5,12 @@ import { config, proxy } from './proxy'
 it('resolves direct loads on the server without intercepting MEDIKA', () => {
   const request = new NextRequest('https://akdevia.com/', { headers: { 'accept-language': 'es-DO' } })
   expect(proxy(request).headers.get('x-middleware-request-x-akdevia-locale')).toBe('es')
-  expect(config.matcher).toEqual(['/'])
+  expect(config.matcher).toEqual(['/', '/products/:path*'])
+})
+it('resolves product-page language without matching the demo zone', () => {
+  const request = new NextRequest('https://akdevia.com/products/medika?lang=es')
+  expect(proxy(request).headers.get('x-middleware-request-x-akdevia-locale')).toBe('es')
+  expect(config.matcher.some(pattern => pattern.startsWith('/medika'))).toBe(false)
 })
 it('honors a saved choice before browser language, and a URL before that choice', () => {
   const headers = { cookie: 'akdevia-locale=en', 'accept-language': 'es-DO' }

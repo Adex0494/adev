@@ -11,7 +11,7 @@ export function FinalCTASection({ locale: override, emailConfigured = false }: F
   const { locale } = useLocale(override)
   const text = (key: string) => t(key, locale)
   const calendar = schedulingUrl()
-  return <section id="contact" aria-labelledby="contact-title" className="bg-background-secondary py-20 lg:py-24">
+  return <section id="contact" tabIndex={-1} aria-labelledby="contact-title" className="bg-background-secondary py-20 lg:py-24">
     <Container size="xl">
       <Badge variant="subtle" className="mb-4">{text('home.cta.badge')}</Badge>
       <Heading as="h2" id="contact-title" className="mb-4">{text('home.cta.heading')}</Heading>

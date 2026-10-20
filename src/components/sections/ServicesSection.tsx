@@ -67,7 +67,7 @@ export function ServicesSection({ locale: override }: ServicesSectionProps) {
   const { locale } = useLocale(override)
   const t = (key: string) => translate(key, locale)
   return (
-    <section id="services" className="bg-background-secondary py-24">
+    <section id="services" tabIndex={-1} className="bg-background py-24">
       <Container size="xl">
         <ScrollReveal>
           <div className="mb-16 text-center">

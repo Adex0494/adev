@@ -6,5 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${site.url}/?lang=en`, alternates: { languages } },
     { url: `${site.url}/?lang=es`, alternates: { languages } },
+    { url: `${site.url}/products/medika`, alternates: { languages: { en: `${site.url}/products/medika?lang=en`, es: `${site.url}/products/medika?lang=es` } } },
   ]
 }

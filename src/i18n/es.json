@@ -13,7 +13,8 @@
     "email": "Escribir a AKDEVIA",
     "website": "Sitio web de AKDEVIA (abre en otra pestaña)",
     "demo": "Demo interactivo · Datos ficticios",
-    "enlarge": "Abrir captura completa (abre en otra pestaña)"
+    "enlarge": "Abrir captura completa (abre en otra pestaña)",
+    "currentSection": "Sección actual"
   },
   "nav": {
     "home": "Inicio de AKDEVIA",
@@ -95,9 +96,20 @@
       "ctaPrimary": "Iniciar un proyecto",
       "ctaSecondary": "Ver nuestro trabajo",
       "note": "Listos para lanzar. Preparados para evolucionar.",
-      "preview": "Un producto real, de la idea al software",
-      "previewLink": "Explorar MEDIKA",
-      "capabilities": "Aplicaciones web · Sitios web · Productos móviles"
+      "capabilities": "Aplicaciones web · Sitios web · Productos móviles",
+      "focus": "Creado para tu forma de trabajar",
+      "purpose": {
+        "title": "Partimos de una necesidad real.",
+        "description": "Un producto útil comienza con tus objetivos y las personas que lo van a usar."
+      },
+      "workflow": {
+        "title": "Simplificamos el trabajo diario.",
+        "description": "Reunimos la información y las acciones necesarias en una experiencia clara y práctica."
+      },
+      "experience": {
+        "title": "Comprueba el resultado.",
+        "description": "Revisa el software funcionando, prueba los procesos y define lo que sigue."
+      }
     },
     "services": {
       "badge": "Qué creamos",
@@ -122,52 +134,10 @@
       "badge": "Proyecto destacado",
       "heading": "Conoce MEDIKA.",
       "subheading": "La gestión de consultas médicas en un solo espacio.",
-      "explore": "Explorar el caso de estudio",
-      "summary": "Nuestro producto destacado conecta expedientes, consultas, recetas y la administración diaria del consultorio. Abre el demo en vivo y experimenta el software por ti mismo.",
+      "explore": "Explorar MEDIKA",
+      "summary": "Una plataforma digital para gestionar pacientes, consultas, historia clínica, recetas, documentos, reportes y los procesos diarios de un consultorio médico.",
       "type": "Plataforma de gestión de consultas médicas",
-      "role": "Desarrollo de producto · Ingeniería de interfaces · Diseño de procesos",
-      "stack": "Next.js · TypeScript · Supabase",
       "imageAlt": "Directorio del demo de MEDIKA con búsqueda, filtros y pacientes ficticios"
-    },
-    "medica": {
-      "badge": "Dentro del producto",
-      "heading": "Menos cambios de pantalla. Más contexto.",
-      "subheading": "MEDIKA conecta las etapas de una consulta para que el equipo clínico trabaje con la misma información del paciente.",
-      "cta": "Abrir demo en vivo",
-      "demoNote": "El demo público utiliza registros ficticios y sanitizados. Explóralo sin introducir datos reales de pacientes.",
-      "problemTitle": "El reto",
-      "problem": "La información del paciente y las tareas del consultorio deben mantenerse conectadas, desde la sala de espera hasta el registro de la consulta.",
-      "solutionTitle": "La solución",
-      "solution": "Un espacio para expedientes, historial clínico, diagnósticos, recetas y documentos, con flujos diferenciados para médicos y secretaría.",
-      "engineeringTitle": "Ingeniería aplicada",
-      "engineering": "Procesos conectados, registros estructurados e interfaces según el rol convierten MEDIKA en un ejemplo concreto de cómo AKDEVIA desarrolla software de negocio.",
-      "gallery": "MEDIKA en detalle",
-      "screenshots": "Capturas del demo público. Todos los pacientes mostrados son ficticios.",
-      "patients": {
-        "title": "Tus pacientes, a la vista",
-        "description": "Busca y filtra el directorio para encontrar al paciente y abrir su expediente.",
-        "alt": "Directorio de MEDIKA con pacientes Demo ficticios, búsqueda y filtros demográficos"
-      },
-      "history": {
-        "title": "El contexto clínico en un solo lugar",
-        "description": "Revisa los datos del paciente y sus consultas anteriores antes de la próxima visita.",
-        "alt": "Expediente e historial de consultas de un paciente Demo ficticio en MEDIKA"
-      },
-      "consultation": {
-        "title": "Un registro de consulta conectado",
-        "description": "Reúne notas clínicas, diagnósticos, recetas y documentos dentro del mismo proceso.",
-        "alt": "Registro de consulta de MEDIKA con notas clínicas ficticias y flujo de recetas"
-      },
-      "templates": {
-        "title": "Documentos integrados al trabajo",
-        "description": "Administra plantillas para los documentos y la información clínica que necesita el consultorio.",
-        "alt": "Interfaz de gestión de plantillas de documentos del demo de MEDIKA"
-      },
-      "reports": {
-        "title": "Visibilidad de la actividad del consultorio",
-        "description": "Consulta la actividad de las consultas desde el espacio de reportes.",
-        "alt": "Espacio de reportes del demo de MEDIKA con filtros de actividad de consultas"
-      }
     },
     "process": {
       "badge": "Cómo trabajamos",
@@ -202,9 +172,7 @@
       "role": "Fundador y desarrollador de software",
       "imageAlt": "Ariangel Díaz Espaillat, fundador de AKDEVIA",
       "description": "AKDEVIA desarrolla aplicaciones web modernas, sitios empresariales y productos digitales que resuelven problemas reales de negocio. Fundada por Ariangel Díaz Espaillat, la empresa une la visión de producto con la implementación de software.",
-      "approach": "Nuestro trabajo combina desarrollo web moderno, interfaces claras y código mantenible. Colaboramos con clientes y equipos profesionales para convertir prioridades en software que las personas pueden abrir, probar y usar.",
-      "technical": "Nuestras tecnologías principales",
-      "technologies": "React · TypeScript · Next.js · Supabase"
+      "approach": "Nos enfocamos en interfaces claras, procesos confiables y software que pueda crecer con tu negocio. Colaboramos con clientes y equipos profesionales para convertir prioridades en productos que las personas pueden abrir, probar y usar."
     },
     "cta": {
       "badge": "Hablemos",
@@ -223,6 +191,68 @@
       "navigation": "Explorar",
       "connect": "Conectar",
       "copyright": "Todos los derechos reservados."
+    }
+  },
+  "products": {
+    "medika": {
+      "seo": {
+        "title": "MEDIKA — Plataforma de gestión de consultorios médicos | AKDEVIA",
+        "description": "Conoce MEDIKA de AKDEVIA: gestión de pacientes, historia clínica, consultas, recetas, documentos y reportes. Explora el producto y prueba la demo en vivo."
+      },
+      "badge": "Un producto de AKDEVIA",
+      "title": "Plataforma de gestión de consultorios médicos",
+      "summary": "Desde la sala de espera hasta el registro de la consulta, MEDIKA conecta el trabajo diario del consultorio en un solo espacio.",
+      "cta": "Abrir demo en vivo",
+      "back": "Volver a AKDEVIA",
+      "overviewTitle": "Un consultorio. Procesos conectados.",
+      "overview": "MEDIKA es una plataforma web para médicos y las personas que apoyan su práctica. La información del paciente, la historia clínica y la actividad del consultorio acompañan las tareas que las necesitan, con flujos separados para médicos y secretarias.",
+      "problemTitle": "El reto",
+      "problem": "La información del paciente debe mantenerse conectada desde la sala de espera hasta la consulta. El equipo necesita encontrar expedientes, revisar visitas anteriores y preparar recetas y documentos de forma clara.",
+      "solutionTitle": "La solución",
+      "solution": "MEDIKA reúne expedientes, coordinación de la sala de espera y consultas en un mismo espacio. Las notas clínicas, los diagnósticos, las recetas y los documentos se vinculan al paciente para dar contexto a cada paso.",
+      "capabilitiesTitle": "Pensado para el trabajo diario",
+      "capabilitiesIntro": "Explora las funciones ya disponibles en MEDIKA.",
+      "capabilities": {
+        "patients": "Gestión de pacientes",
+        "waiting": "Sala de espera",
+        "consultations": "Consultas activas",
+        "history": "Historia clínica",
+        "diagnoses": "Diagnósticos",
+        "prescriptions": "Recetas",
+        "documents": "Documentos médicos",
+        "templates": "Plantillas de documentos",
+        "reports": "Reportes",
+        "attachments": "Archivos adjuntos",
+        "roles": "Flujos de médico y secretaria"
+      },
+      "engineeringTitle": "Ingeniería",
+      "engineering": "Una aplicación web adaptable con flujos según el rol y una base de datos compartida para conectar los expedientes. La tecnología apoya la experiencia; el producto sigue siendo el centro.",
+      "experienceTitle": "No solo ideas... Resultados que puedes experimentar.",
+      "experience": "Ya conoces el flujo de trabajo. Ahora abre MEDIKA y explora el producto con los registros ficticios de la demo.",
+      "demoCta": "Abrir demo de MEDIKA",
+      "patients": {
+        "title": "Tus pacientes, a la vista",
+        "description": "Busca y filtra el directorio para encontrar al paciente y abrir su expediente.",
+        "alt": "Directorio de MEDIKA con pacientes Demo ficticios, búsqueda y filtros demográficos"
+      },
+      "history": {
+        "title": "El contexto clínico en un solo lugar",
+        "description": "Revisa los datos del paciente y sus consultas anteriores antes de la próxima visita.",
+        "alt": "Expediente e historial de consultas de un paciente Demo ficticio en MEDIKA"
+      },
+      "consultation": {
+        "title": "Un registro de consulta conectado",
+        "description": "Reúne notas clínicas, diagnósticos, recetas y documentos dentro del mismo proceso.",
+        "alt": "Registro de consulta de MEDIKA con notas clínicas ficticias y flujo de recetas"
+      },
+      "reports": {
+        "title": "Visibilidad de la actividad del consultorio",
+        "description": "Consulta la actividad de las consultas desde el espacio de reportes.",
+        "alt": "Espacio de reportes del demo de MEDIKA con filtros de actividad de consultas"
+      },
+      "gallery": "MEDIKA en detalle",
+      "screenshots": "Capturas del demo público. Todos los pacientes mostrados son ficticios.",
+      "demoNote": "El demo público utiliza registros ficticios y sanitizados. Explóralo sin introducir datos reales de pacientes."
     }
   }
 }

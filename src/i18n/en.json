@@ -13,7 +13,8 @@
     "email": "Email AKDEVIA",
     "website": "AKDEVIA website (opens in a new tab)",
     "demo": "Interactive demo · Fictional data",
-    "enlarge": "Open full-size screenshot (opens in a new tab)"
+    "enlarge": "Open full-size screenshot (opens in a new tab)",
+    "currentSection": "Current section"
   },
   "nav": {
     "home": "AKDEVIA home",
@@ -95,9 +96,20 @@
       "ctaPrimary": "Start a project",
       "ctaSecondary": "View our work",
       "note": "Built to launch. Designed to evolve.",
-      "preview": "A real product, from idea to working software",
-      "previewLink": "Explore MEDIKA",
-      "capabilities": "Web applications · Websites · Mobile products"
+      "capabilities": "Web applications · Websites · Mobile products",
+      "focus": "Built for the way you work",
+      "purpose": {
+        "title": "Start with a real need.",
+        "description": "A useful product begins with your goals and the people who will use it."
+      },
+      "workflow": {
+        "title": "Make everyday work simpler.",
+        "description": "Bring the right information and actions together in a clear, practical experience."
+      },
+      "experience": {
+        "title": "See the result for yourself.",
+        "description": "Review working software, try the workflows and shape what comes next."
+      }
     },
     "services": {
       "badge": "What we build",
@@ -122,52 +134,10 @@
       "badge": "Featured work",
       "heading": "Meet MEDIKA.",
       "subheading": "Medical practice management, brought into one workspace.",
-      "explore": "Explore the case study",
-      "summary": "Our flagship product connects patient records, consultations, prescriptions and everyday practice administration. Open the live demo and experience the software for yourself.",
+      "explore": "Explore MEDIKA",
+      "summary": "A digital platform for managing patients, consultations, clinical history, prescriptions, documents, reports and daily medical-practice workflows.",
       "type": "Medical Practice Management Platform",
-      "role": "Product development · UI engineering · Workflow design",
-      "stack": "Next.js · TypeScript · Supabase",
       "imageAlt": "MEDIKA demo patient directory with search, filters and fictional patient records"
-    },
-    "medica": {
-      "badge": "Inside the product",
-      "heading": "Less switching. More context.",
-      "subheading": "MEDIKA brings the stages of a consultation together so the clinical team can work from the same patient context.",
-      "cta": "Launch live demo",
-      "demoNote": "The public demo uses fictional, sanitized records. Explore it without entering real patient information.",
-      "problemTitle": "The challenge",
-      "problem": "Patient information and day-to-day practice tasks need to stay connected, from the waiting room to the consultation record.",
-      "solutionTitle": "The approach",
-      "solution": "A single workspace for patient records, clinical history, diagnoses, prescriptions and documents, with separate doctor and secretary workflows.",
-      "engineeringTitle": "Engineering in practice",
-      "engineering": "Connected workflows, structured records and role-based interfaces make MEDIKA a concrete example of how AKDEVIA approaches business software.",
-      "gallery": "A closer look at MEDIKA",
-      "screenshots": "Screenshots from the public demo. All patient records shown are fictional.",
-      "patients": {
-        "title": "A clear view of your patients",
-        "description": "Search and filter the directory to find the right patient and open their record.",
-        "alt": "MEDIKA patient directory showing fictional Demo patients, search and demographic filters"
-      },
-      "history": {
-        "title": "Clinical context in one place",
-        "description": "Review patient details and previous consultations before the next visit.",
-        "alt": "MEDIKA patient overview and consultation history for a fictional Demo patient"
-      },
-      "consultation": {
-        "title": "A connected consultation record",
-        "description": "Bring clinical notes, diagnoses, prescriptions and documents into the same workflow.",
-        "alt": "MEDIKA consultation record showing fictional clinical notes and prescription workflow"
-      },
-      "templates": {
-        "title": "Documents that fit the workflow",
-        "description": "Manage document templates for the clinical information your practice needs to prepare.",
-        "alt": "MEDIKA demo document template management interface"
-      },
-      "reports": {
-        "title": "Visibility into practice activity",
-        "description": "Review consultation activity through the reports workspace.",
-        "alt": "MEDIKA demo reports workspace with consultation activity filters"
-      }
     },
     "process": {
       "badge": "How we work",
@@ -202,9 +172,7 @@
       "role": "Founder & Software Developer",
       "imageAlt": "Ariangel Díaz Espaillat, founder of AKDEVIA",
       "description": "AKDEVIA builds modern web applications, business websites and digital products that solve real business problems. Founded by Ariangel Díaz Espaillat, the company connects product thinking with hands-on software development.",
-      "approach": "Our work combines modern web development with clear interfaces and maintainable implementation. We collaborate with clients and professional teams to turn priorities into software people can open, test and use.",
-      "technical": "Our core technologies",
-      "technologies": "React · TypeScript · Next.js · Supabase"
+      "approach": "We focus on clear interfaces, reliable workflows and software that can grow with your business. We work with clients and professional teams to turn priorities into products people can open, test and use."
     },
     "cta": {
       "badge": "Let’s talk",
@@ -223,6 +191,68 @@
       "navigation": "Explore",
       "connect": "Connect",
       "copyright": "All rights reserved."
+    }
+  },
+  "products": {
+    "medika": {
+      "seo": {
+        "title": "MEDIKA — Medical Practice Management Platform | AKDEVIA",
+        "description": "Explore MEDIKA by AKDEVIA: patient management, clinical history, consultations, prescriptions, documents and reports. See the product and try the live demo."
+      },
+      "badge": "An AKDEVIA product",
+      "title": "Medical Practice Management Platform",
+      "summary": "From the waiting room to the consultation record, MEDIKA connects the daily work of a medical practice in one workspace.",
+      "cta": "Launch live demo",
+      "back": "Back to AKDEVIA",
+      "overviewTitle": "One practice. Connected workflows.",
+      "overview": "MEDIKA is a web platform for doctors and the people who support their practice. Patient information, clinical history and practice activity stay close to the tasks that need them, with separate doctor and secretary workflows.",
+      "problemTitle": "The challenge",
+      "problem": "Patient information needs to stay connected as a visit moves from the waiting room to the consultation. Teams need a clear way to find records, review previous visits and prepare prescriptions and documents.",
+      "solutionTitle": "The solution",
+      "solution": "MEDIKA brings patient records, waiting-room coordination and consultations into one workspace. Clinical notes, diagnoses, prescriptions and documents connect to the patient record, so each step has the context it needs.",
+      "capabilitiesTitle": "Built around the daily practice",
+      "capabilitiesIntro": "Explore the functions already available in MEDIKA.",
+      "capabilities": {
+        "patients": "Patient management",
+        "waiting": "Waiting room",
+        "consultations": "Active consultations",
+        "history": "Clinical history",
+        "diagnoses": "Diagnoses",
+        "prescriptions": "Prescriptions",
+        "documents": "Medical documents",
+        "templates": "Document templates",
+        "reports": "Reports",
+        "attachments": "Attachments",
+        "roles": "Doctor and secretary workflows"
+      },
+      "engineeringTitle": "Engineering",
+      "engineering": "A responsive web application with role-based workflows and a shared database for connected patient records. The technology supports the experience; the product remains the focus.",
+      "experienceTitle": "Not just ideas... Results you can experience",
+      "experience": "You have seen the workflow. Now open MEDIKA and explore the product with fictional demo records.",
+      "demoCta": "Launch MEDIKA demo",
+      "patients": {
+        "title": "A clear view of your patients",
+        "description": "Search and filter the directory to find the right patient and open their record.",
+        "alt": "MEDIKA patient directory showing fictional Demo patients, search and demographic filters"
+      },
+      "history": {
+        "title": "Clinical context in one place",
+        "description": "Review patient details and previous consultations before the next visit.",
+        "alt": "MEDIKA patient overview and consultation history for a fictional Demo patient"
+      },
+      "consultation": {
+        "title": "A connected consultation record",
+        "description": "Bring clinical notes, diagnoses, prescriptions and documents into the same workflow.",
+        "alt": "MEDIKA consultation record showing fictional clinical notes and prescription workflow"
+      },
+      "reports": {
+        "title": "Visibility into practice activity",
+        "description": "Review consultation activity through the reports workspace.",
+        "alt": "MEDIKA demo reports workspace with consultation activity filters"
+      },
+      "gallery": "A closer look at MEDIKA",
+      "screenshots": "Screenshots from the public demo. All patient records shown are fictional.",
+      "demoNote": "The public demo uses fictional, sanitized records. Explore it without entering real patient information."
     }
   }
 }

@@ -15,7 +15,9 @@ describe('HeroSection', () => {
     render(<HeroSection />)
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(t('home.hero.title'))
     expect(screen.getByRole('link', { name: /view our work/i })).toHaveAttribute('href', '#work')
-    expect(screen.getByRole('img')).toHaveAttribute('src', '/projects/medika/medika-patients.webp')
+    expect(screen.queryByRole('img')).not.toBeInTheDocument()
+    expect(document.body.textContent).not.toMatch(/MEDIKA|React|TypeScript|Next.js|Supabase/)
+    expect(screen.getByRole('heading', { name: 'Start with a real need.' })).toBeInTheDocument()
   })
   it('opens and closes the project form', async () => {
     render(<HeroSection />)

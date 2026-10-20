@@ -18,6 +18,6 @@ export function resolveLocale({ query, preference, browserLanguage }: {
   return primaryLanguage?.startsWith('es') ? 'es' : 'en'
 }
 
-export function localeHref(locale: Locale): string {
-  return `/?lang=${locale}`
+export function localeHref(locale: Locale, pathname = '/'): string {
+  return `${pathname}?lang=${locale}`
 }

@@ -12,7 +12,7 @@ export interface FounderSectionProps { locale?: Locale }
 export function FounderSection({ locale: override }: FounderSectionProps) {
   const { locale } = useLocale(override)
   const text = (key: string) => t(key, locale)
-  return <section id="about" aria-labelledby="founder-title" className="bg-background py-20 lg:py-24">
+  return <section id="about" tabIndex={-1} aria-labelledby="founder-title" className="bg-background py-20 lg:py-24">
     <Container size="xl">
       <div className="border-t border-border pt-12">
         <div className="mb-10 text-center">
@@ -31,10 +31,6 @@ export function FounderSection({ locale: override }: FounderSectionProps) {
           <div className="min-w-0 space-y-5 text-base leading-relaxed text-muted">
             <p>{text('home.founder.description')}</p>
             <p>{text('home.founder.approach')}</p>
-            <div className="border-t border-border pt-5">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-foreground-secondary">{text('home.founder.technical')}</p>
-              <p className="font-mono text-sm leading-relaxed text-primary-text">{text('home.founder.technologies')}</p>
-            </div>
           </div>
         </div>
       </div>

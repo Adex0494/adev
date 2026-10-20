@@ -5,14 +5,16 @@ import { useLocale } from '@/i18n/LocaleProvider'
 import { localeHref } from '@/i18n/preferences'
 import type { Locale } from '@/i18n'
 import { cn } from '@/lib/utils'
+import { usePathname } from 'next/navigation'
 
 export interface LanguageToggleProps { locale?: Locale; className?: string }
 
 export function LanguageToggle({ locale: override, className }: LanguageToggleProps) {
   const { locale, setLocale } = useLocale(override)
   const next = locale === 'en' ? 'es' : 'en'
+  const pathname = usePathname()
   return <a
-    href={localeHref(next)}
+    href={localeHref(next, pathname)}
     hrefLang={next}
     lang={next}
     aria-label={t('common.language', locale)}

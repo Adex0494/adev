@@ -128,6 +128,9 @@ html {
 }
 
 section[id], main[id] { scroll-margin-top: 6rem; }
+.nav-link { border-bottom: 2px solid transparent; border-radius: .25rem; color: rgb(var(--muted)); font-size: .875rem; }
+.nav-link:hover { color: rgb(var(--fg)); }
+.nav-link[data-active="true"] { border-bottom-color: rgb(var(--primary-text)); color: rgb(var(--primary-text)); font-weight: 600; }
 a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 :where(a, button, input, select, textarea, summary):focus-visible {
   outline: 2px solid rgb(var(--ring));
